@@ -1,0 +1,108 @@
+/* Header */
+header {
+}
+
+.top_header {
+  padding-top: 10px;
+  display: flex;
+  background-color: rgb(62, 63, 66);
+}
+
+.fa-desktop {
+  color: rgb(20, 170, 0);
+}
+
+.header_logo {
+  margin-left: 25rem;
+  margin-right: auto;
+}
+
+.search input[type="text"] {
+  position: absolute;
+  padding: 6px;
+  width: 30%;
+  right: 40rem;
+  display: flex;
+  border: 1px solid black;
+  font-size: 17px;
+}
+
+.top_header a {
+  display: block;
+  float: left;
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.search {
+  justify-content: center;
+  align-content: center;
+  padding-top: 2rem;
+}
+
+/* NavBar */
+
+nav li {
+  margin-left: 4.8rem;
+}
+
+nav i:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+nav a::before {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 0%;
+  background-color: rgb(20, 170, 0);
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+/* Main */
+#carousel {
+  height: 250px;
+  margin-top: 5px;
+}
+
+.d-block,
+.carousel-item {
+  height: 250px;
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 175px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 173px;
+  height: 173px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+p {
+  clear: both;
+}
+/* Footer */
+footer {
+  background-color: rgb(62, 63, 66);
+  color: white;
+}
