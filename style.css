@@ -1,15 +1,17 @@
 /* Header */
 header {
+  background-color: #f8f9fa;
 }
 
 .top_header {
   padding-top: 10px;
   display: flex;
-  background-color: rgb(62, 63, 66);
+  background-color: #424143;
 }
 
+.fa-gg,
 .fa-desktop {
-  color: rgb(20, 170, 0);
+  color: #91c612;
 }
 
 .header_logo {
@@ -30,7 +32,7 @@ header {
 .top_header a {
   display: block;
   float: left;
-  color: black;
+  color: #91c612;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
@@ -44,7 +46,7 @@ header {
 
 /* NavBar */
 
-nav li {
+header nav li {
   margin-left: 4.8rem;
 }
 
@@ -58,7 +60,7 @@ nav a::before {
   display: block;
   height: 5px;
   width: 0%;
-  background-color: rgb(20, 170, 0);
+  background-color: #91c612;
   transition: all ease-in-out 250ms;
 }
 
@@ -66,17 +68,32 @@ nav a:hover::before {
   width: 100%;
 }
 
-/* Main */
+/* Breadcrumb */
+.breadcrumb {
+  background-color: #424143;
+}
+
+.breadcrumb li {
+  margin-left: 21%;
+}
+
+.breadcrumb li i {
+  color: #91c612;
+}
+
+/* Carousel */
 #carousel {
-  height: 250px;
-  margin-top: 5px;
+  height: 400px;
+  margin-top: -16px;
+  margin-bottom: 20px;
 }
 
 .d-block,
 .carousel-item {
-  height: 250px;
+  height: 400px;
 }
 
+/* Brands */
 div.gallery {
   margin: 5px;
   border: 1px solid #ccc;
@@ -98,11 +115,35 @@ div.desc {
   text-align: center;
 }
 
-p {
-  clear: both;
-}
 /* Footer */
 footer {
-  background-color: rgb(62, 63, 66);
+  background-color: #343a40;
   color: white;
+  clear: both;
+  text-align: center;
+  margin-top: 17rem;
+}
+
+footer nav li {
+  margin-left: 8.5rem;
+  margin-right: 8.5rem;
+}
+
+.bottom_footer {
+  background-color: #424143;
+  margin-bottom: 0px;
+  padding: 3px;
+  padding-top: 25px;
+}
+
+.fa-envelope,
+.fa-youtube {
+  color: #91c612;
+}
+
+footer a {
+  color: white;
+}
+
+.info {
 }
