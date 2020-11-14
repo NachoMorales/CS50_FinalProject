@@ -5,7 +5,7 @@ header {
 
 .top_header {
   padding-top: 10px;
-  display: flex;
+  /*display: flex;*/
   background-color: #424143;
 }
 
