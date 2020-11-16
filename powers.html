@@ -7,6 +7,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
+
     <script src="https://kit.fontawesome.com/0a526d817b.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -14,15 +15,17 @@
 </head>
 <body>
     <header>
-        <div class="top_header">
-            <div class="header_logo">
-                <a href="index.html"><i class="fab fa-gg fa-5x"></i>GG Components</a>
-                <!--<a href="index.html"><i class="fas fa-desktop fa-5x"></i>PC Components</a>-->
-            </div>
-            <div class="search">
-                <form>
-                    <input type="text" placeholder="Search">
-                </form>
+        <div class="blackback">
+            <div class="top_header">
+                <div class="header_logo">
+                    <a href="index.html"><i class="fab fa-gg fa-5x"></i></a>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search components" aria-label="search components" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-search fa-lg"></i></button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="container">
@@ -52,13 +55,15 @@
                 </div>
             </nav>
         </div>
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
+        <div class="blackback">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home fa-lg"></i></a></li>
               <li class="breadcrumb-item"><a href="products.html">All Products</a></li>
               <li class="breadcrumb-item active" aria-current="page">Power Supplies</li>
-            </ol>
-          </nav>
+                </ol>
+            </nav>
+        </div>
     </header>
     <div class="container">
         

@@ -12,17 +12,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload="productFilter('processors')">
     <header>
-        <div class="top_header">
-            <div class="header_logo">
-                <a href="index.html"><i class="fab fa-gg fa-5x"></i>GG Components</a>
-                <!--<a href="index.html"><i class="fas fa-desktop fa-5x"></i>PC Components</a>-->
-            </div>
-            <div class="search">
-                <form>
-                    <input type="text" placeholder="Search">
-                </form>
+        <div class="blackback">
+            <div class="top_header">
+                <div class="header_logo">
+                    <a href="index.html"><i class="fab fa-gg fa-5x"></i></a>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search components" aria-label="search components" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-search fa-lg"></i></button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="container">
@@ -52,16 +54,97 @@
                 </div>
             </nav>
         </div>
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home fa-lg"></i></a></li>
-              <li class="breadcrumb-item"><a href="products.html">All Products</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Processors</li>
-            </ol>
-          </nav>
+        <div class="blackback">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home fa-lg"></i></a></li>
+                    <li class="breadcrumb-item"><a href="products.html">All Products</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Processors</li>
+                </ol>
+            </nav>
+        </div>
     </header>
     <div class="container">
-        
+        <div class="sidenav">
+            <button class="dropdown-btn" onclick="dropdown(0)">Processors<i class="fa fa-caret-down"></i></button>
+              <div class="dropdown-container active" id="dropdown0">
+                <a href="#">AMD</a>
+                <a href="#">Intel</a>
+              </div>
+            <button class="dropdown-btn" onclick="dropdown(1)">Graphics Cards<i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-container" id="dropdown1">
+                <a href="#">Nvidia</a>
+                <a href="#">AMD</a>
+              </div>
+            <a href="mother.html">Motherboards</a>
+            <a href="ram.html">RAM Memorys</a>
+            <a href="#">Power Supplies</a>
+        </div> 
+        <div class="main">
+            <div class="card" id="card0">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                </div>
+            </div>
+            <div class="card" id="card1">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                </div>
+            </div>
+            <div class="card" id="card2">
+                <img src="" alt="image" class="image">
+                <div class="container">
+                    <h4 class="name"></h4>
+                    <h5 class="price"></h5>
+                </div>
+            </div>
+            <div class="card" id="card3">
+                <img src="" alt="image" class="image">
+                <div class="container">
+                    <h4 class="name"></h4>
+                    <h5 class="price"></h5>
+                </div>
+            </div>
+            <div class="card" id="card4">
+                <img src="" alt="image" class="image">
+                <div class="container">
+                    <h4 class="name"></h4>
+                    <h5 class="price"></h5>
+                </div>
+            </div>
+            <div class="card" id="card5">
+                <img src="" alt="image" class="image">
+                <div class="container">
+                    <h4 class="name"></h4>
+                    <h5 class="price"></h5>
+                </div>
+            </div>
+            <div class="card" id="card6">
+                <img src="" alt="image" class="image">
+                <div class="container">
+                    <h4 class="name"></h4>
+                    <h5 class="price"></h5>
+                </div>
+            </div>
+            <div class="card" id="card7">
+                <img src="" alt="image" class="image">
+                <div class="container">
+                    <h4 class="name"></h4>
+                    <h5 class="price"></h5>
+                </div>
+            </div>
+            <div class="card" id="card8">
+                <img src="" alt="image" class="image">
+                <div class="container">
+                    <h4 class="name"></h4>
+                    <h5 class="price"></h5>
+                </div>
+            </div>
+        </div>
     </div>
     <footer>
         <div class="container">

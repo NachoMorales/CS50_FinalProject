@@ -1,20 +1,4 @@
-// USELESS
-function redirect(id) {
-    window.location.assign(id+".html")
-}
-
-    // Sidenav dropdowns
-function dropdown(n) {
-    x = document.getElementById("dropdown" + n)
-    if (x.style.display === 'block') {
-        return x.style.display = 'none';
-    } else {
-        return x.style.display = 'block';
-    }
-}
-
-    // products.JSON
-let products = [
+[
     {
         "name" : "AMD Ryzen 5 3600",
         "brand": "AMD",
@@ -185,61 +169,185 @@ let products = [
         "specs":["CPU Socket Type LGA 1151 (300 Series)","Core Name Coffee Lake","8-Core","16 Threads","Operating Frequency 4.0 GHz","Max Turbo Frequency 5.0 GHz","Bus Speed 8 GT/s","L3 Cache 16MB","14nm 127W","64-Bit Support","Hyper-Threading Support","Memory Types DDR4 2666","Memory Channel 2","Virtualization Technology Support","Intel UHD Graphics 630","Graphics Base Frequency 350 MHz","Graphics Max Dynamic Frequency 1.2 GHz","PCI Express Revision 3.0","Max Number of PCI Express Lanes 16","Cooling device not included - Processor Only"],
         "image":"images/products/i9-9900ks.jpg",
         "all":"true"
+    },
+    {
+        "name":"",
+        "brand":"",
+        "price":"",
+        "category":"",
+        "specs":[""],
+        "image":"",
+        "all":"true"
+    },
+    {
+        "name":"",
+        "brand":"",
+        "price":"",
+        "category":"",
+        "specs":[""],
+        "image":"",
+        "all":"true"
+    },
+    {
+        "name":"",
+        "brand":"",
+        "price":"",
+        "category":"",
+        "specs":[""],
+        "image":"",
+        "all":"true"
+    },
+    {
+        "name":"",
+        "brand":"",
+        "price":"",
+        "category":"",
+        "specs":[""],
+        "image":"",
+        "all":"true"
+    },
+    {
+        "name":"",
+        "brand":"",
+        "price":"",
+        "category":"",
+        "specs":[""],
+        "image":"",
+        "all":"true"
+    },
+    {
+        "name":"",
+        "brand":"",
+        "price":"",
+        "category":"",
+        "specs":[""],
+        "image":"",
+        "all":"true"
+    },
+    {
+        "name":"",
+        "brand":"",
+        "price":"",
+        "category":"",
+        "specs":[""],
+        "image":"",
+        "all":"true"
+    },
+    {
+        "name":"",
+        "brand":"",
+        "price":"",
+        "category":"",
+        "specs":[""],
+        "image":"",
+        "all":"true"
+    },
+    {
+        "name":"",
+        "brand":"",
+        "price":"",
+        "category":"",
+        "specs":[""],
+        "image":"",
+        "all":"true"
+    },
+    {
+        "name":"",
+        "brand":"",
+        "price":"",
+        "category":"",
+        "specs":[""],
+        "image":"",
+        "all":"true"
+    },
+    {
+        "name":"",
+        "brand":"",
+        "price":"",
+        "category":"",
+        "specs":[""],
+        "image":"",
+        "all":"true"
+    },
+    {
+        "name":"",
+        "brand":"",
+        "price":"",
+        "category":"",
+        "specs":[""],
+        "image":"",
+        "all":"true"
+    },
+    {
+        "name":"",
+        "brand":"",
+        "price":"",
+        "category":"",
+        "specs":[""],
+        "image":"",
+        "all":"true"
+    },
+    {
+        "name":"",
+        "brand":"",
+        "price":"",
+        "category":"",
+        "specs":[""],
+        "image":"",
+        "all":"true"
+    },
+    {
+        "name":"",
+        "brand":"",
+        "price":"",
+        "category":"",
+        "specs":[""],
+        "image":"",
+        "all":"true"
+    },
+    {
+        "name":"",
+        "brand":"",
+        "price":"",
+        "category":"",
+        "specs":[""],
+        "image":"",
+        "all":"true"
+    },
+    {
+        "name":"",
+        "brand":"",
+        "price":"",
+        "category":"",
+        "specs":[""],
+        "image":"",
+        "all":"true"
+    },
+    {
+        "name":"",
+        "brand":"",
+        "price":"",
+        "category":"",
+        "specs":[""],
+        "image":"",
+        "all":"true"
+    },
+    {
+        "name":"",
+        "brand":"",
+        "price":"",
+        "category":"",
+        "specs":[""],
+        "image":"",
+        "all":"true"
+    },
+    {
+        "name":"",
+        "brand":"",
+        "price":"",
+        "category":"",
+        "specs":[""],
+        "image":"",
+        "all":"true"
     }
 ]
-
-
-// Filter Products onload
-// NOTAS: cambiar maxCards value al agregar productos en json
-function allProducts(bool) {
-    var allProducts = products.filter(item => item.all == bool);
-    var validCards = allProducts.length;
-    
-    // Filtrar cantidad de cartas que se van a mostrar
-    for (var maxCards = 28; maxCards >= validCards;) {
-        var highestCardId = "card" + maxCards;
-        maxCards -= 1;
-        document.getElementById(highestCardId).style.display = 'none';
-    }
-
-        // Cargar contenido en las cartas
-    for (var card = 0; card < validCards; card += 1) {
-        var id = "#card" + card;
-        document.querySelector(id).getElementsByTagName("h4")[0].textContent = allProducts[card].name;
-        document.querySelector(id).getElementsByTagName("h5")[0].textContent = allProducts[card].price;
-        document.querySelector(id).getElementsByTagName("img")[0].src = allProducts[card].image;
-    }
-}
-
-
-// Filtering Category onLoad => Change to onClick
-// NOTAS: cambiar maxCards value al agregar productos en json
-function productFilter(filter) {
-    var filteredProducts = products.filter(item => item.category == filter);
-    var validCards = filteredProducts.length;
-
-    // Filtrar cantidad de cartas que se van a mostrar
-    for (var maxCards = 28; maxCards >= validCards;) {
-        var highestCardId = "card" + maxCards;
-        maxCards -= 1;
-        document.getElementById(highestCardId).style.display = 'none';
-    }
-    // Mostrar cartas válidas
-    //for (var cards = 0; cards < validCards;) {
-    //    var lowestCardId = "card" + cards;
-    //    cards += 1;
-    //    document.getElementById(lowestCardId).style.display = 'block';
-    //}
-
-    // Cargar contenido en las cartas
-    for (var card = 0; card < validCards; card += 1) {
-        var id = "#card" + card;
-        document.querySelector(id).getElementsByTagName("h4")[0].textContent = filteredProducts[card].name;
-        document.querySelector(id).getElementsByTagName("h5")[0].textContent = filteredProducts[card].price;
-        document.querySelector(id).getElementsByTagName("img")[0].src = filteredProducts[card].image;
-    }
-}
-
-
-
-// TODO: BREADCRUMB FUNCTION: CHANGE ON FILTERING
