@@ -1,353 +1,542 @@
-[
-    {
-        "name" : "AMD Ryzen 5 3600",
-        "brand": "AMD",
-        "price" : "$200",
-        "category" : "processors",
-        "specs": ["3rd Gen Ryzen", "Socket AM4", "Max Boost Frequency 4.2 GHz", "DDR4 Support", "L2 Cache 3MB", "L3 Cache 32MB", "Thermal Design Power 65W", "With Wraith Stealth cooler"],
-        "image" : "images/products/ryzen5-3600.jpg",
-        "all":"true"
-    },
-    {
-        "name" : "Intel Core i5-10600 K",
-        "brand": "Intel",
-        "price" : "$275",
-        "category" : "processors",
-        "specs":["CPU Socket LGA 1200", "14 nm Comet Lake 125W", "6-Core", "12-Threads", "Operating Frequency 4.1 GHz", "Max Turbo Frequency 4.80 GHz", "Bus Speed 8 GT/s","L3 Cache 12MB", "64-Bit Support","Hyper-Threading Support", "Memory Types DDR4 2666", "Memory Channel 2","Virtualization Technology Support","Integrated Graphics: Intel UHD Graphics 630", "Graphics Base Frequency 350 MHz","Graphics Max Dynamic Frequency 1.2 GHz","PCI Express Revision 3.0","Max Number of PCI Express Lanes: 16","Cooling Device not included - Processor Only"],
-        "image" :"images/products/i5-10400.jpg",
-        "all":"true"
-    },
-    {
-        "name":"EVGA GeForce RTX 2060",
-        "brand":"Nvidia",
-        "price":"$370",
-        "category":"graphics",
-        "specs": ["Boost Clock: 1755 MHz", "Real-Time RAY TRACING in games for cutting-edge, hyper-realistic graphics", "Dual HDB Fans offer higher performance cooling and much quieter acoustic noise", "Built for EVGA Precision X1 - EVGA's all-new tuning utility monitors your graphics card and gives you the power to overclock like a pro!"],
-        "image":"images/products/rtx2060.jpg",
-        "all":"true"
-    },
-    {
-        "name":"GIGABYTE Radeon RX 5700 XT",
-        "brand":"AMD",
-        "price":"$420",
-        "category":"graphics",
-        "specs": ["8GB 256-Bit GDDR6", "Core Clock 1650 MHz", "Boost Clock 1905 MHz", "1 x HDMI 2.0b 3 x DisplayPort 1.4", "2560 Stream Processors", "PCI Express 4.0 x16"],
-        "image":"images/products/rx5700xt.jpg",
-        "all":"true"
-    },
-    {
-        "name":"EVGA GeForceGTX 1660 Ti",
-        "brand":"Nvidia",
-        "price":"$300",
-        "category":"graphics",
-        "specs":["Boost Clock: 1845 MHz", "All-new NVIDIA Turing architecture to give you incredible new levels of gaming realism, speed, power efficiency and immersion", "Dual Fans offer higher performance cooling and low acoustic noise", "Built for EVGA Precision X1 - EVGA's all-new tuning utility monitors your graphics card and gives you the power to overclock like a pro!"],
-        "image":"images/products/gtx1660ti.jpg",
-        "all":"true"
-    },
-    {
-        "name":"GIGABYTE Radeon RX 580",
-        "brand":"AMD",
-        "price":"$200",
-        "category":"graphics",
-        "specs":["8GB 256-Bit GDDR5", "Core Clock OC mode: up to 1355 MHz", "Gaming mode: up to 1340 MHz", "1 x HDMI 2.0b 3 x DisplayPort 1.4", "2304 Stream Processors", "PCI Express 3.0"],
-        "image":"images/products/rx580.jpg",
-        "all":"true"
-    },
-    {
-        "name":"GIGABYTE GeForce GTX 1050 Ti",
-        "brand":"Nvidia",
-        "price":"$160",
-        "category":"graphics",
-        "specs": ["4GB 128-Bit GDDR5", "Core Clock 1316 MHz in OC Mode", "1290 MHz in Gaming", "Boost Clock 1430 MHz in OC Mode", "1392 MHz in Gaming", "1 x Dual-Link DVI-D 1 x HDMI 2.0b 1 x DisplayPort 1.4", "PCI Express 3.0 x16"],
-        "image":"images/products/gtx1050ti.jpg",
-        "all":"true"
-    },
-    {
-        "name":"ASRock Phantom Gaming Radeon RX 5600 XT",
-        "brand":"AMD",
-        "price":"$290",
-        "category":"graphics",
-        "specs": ["6GB 192-Bit GDDR6", "Core Clock 1530 MHz", "Boost Clock 1750 MHz", "1 x HDMI 2.0b 3 x DisplayPort 1.4", "2304 Stream Processors", "PCI Express 4.0 x16"],
-        "image":"images/products/rx5600xt.jpg",
-        "all":"true"
-    },
-    {
-        "name":"GIGABYTE Radeon RX 5500 XT",
-        "brand":"AMD",
-        "price":"$210",
-        "category":"graphics",
-        "specs": ["8GB 128-Bit GDDR6", "Boost Clock 1845 MHz", "1 x HDMI 2.0b 3 x DisplayPort 1.4", "1408 Stream Processors", "PCI Express 4.0 x8"],
-        "image":"images/products/rx5500xt.jpg",
-        "all":"true"
-    },
-    {
-        "name":"MSI GeForce GTX 1660 Ti Gaming X",
-        "brand":"Nvidia",
-        "price":"$360",
-        "category":"graphics",
-        "specs": ["6GB 192-Bit GDDR6", "Boost Clock 1875 MHz", "1 x HDMI 2.0b 3 x DisplayPort 1.4", "1536 CUDA Cores", "PCI Express 3.0 x16"],
-        "image":"images/products/msigtx1660ti.jpg",
-        "all":"true"
-    },
-    {
-        "name":"ASUS TUF Gaming GeForce GTX 1650",
-        "brand":"Nvidia",
-        "price":"$160",
-        "category":"graphics",
-        "specs": ["4GB 128-Bit GDDR6", "Core Clock 1410 MHz", "Boost Clock 1755 MHz (Gaming Mode), 1785 MHz (OC Mode)", "1 x DVI-D 1 x HDMI 2.0b 1 x DisplayPort 1.4", "896 CUDA Cores", "PCI Express 3.0"],
-        "image":"images/products/gtx1650.jpg",
-        "all":"true"
-    },
-    {
-        "name":"AMD Ryzen 7 5800 X",
-        "brand":"AMD",
-        "price":"$450",
-        "category":"processors",
-        "specs":["CPU Socket AM4", "8-Core", "16 Threads", "Operating Frequency 3.8 GHz", "Max Turbo Frequency 4.7 GHz", "L2 Cache 4MB", "L3 Cache 32MB", "Manufacturing Tech 7nm", "64-Bit Support", "Memory Types: DDR4 3200", "PCI Express Revision 4.0", "Thermal Design Power 105W", "Cooling device not included - Processor Only"],
-        "image":"images/products/ryzen7-5800x.jpg",
-        "all":"true"
-    },
-    {
-        "name":"Intel Core i9-10980 XE",
-        "brand":"Intel",
-        "price":"$1000",
-        "category":"processors",
-        "specs":["CPU Socket Type LGA 2066", "14nm Cascade Lake 165W", "18-Core","36 Threads","Operating Frequency 3.0 GHz","Max Turbo Frequency: Intel Turbo Boost 2.0 Max Technology Frequency (GHz): 4.6 - Intel Turbo Boost 3.0 Max Technology Frequency (GHz): 4.8","Bus Speed 8 GT/s","L3 Cache 24.75MB","64-Bit Support","Hyper-Threading Support","Memory Types DDR4 2933","Memory Channel 4","PCI Express Revision 3.0","Max Number of PCI Express Lanes 48","Cooling device not included - Processor Only"],
-        "image":"images/products/i9-10980xe.jpg",
-        "all":"true"
-    },
-    {
-        "name":"AMD Ryzen 9 5900 X",
-        "brand":"AMD",
-        "price":"$550",
-        "category":"processors",
-        "specs":["Socket AM4", "12-Core","24 Threads","Operating Frequency 3.7 GHz","Max Turbo Frequency 4.8 GHz","L2 Cache 6MB","L3 Cache 64MB","7nm 105W","64-Bit Support","Memory Types DDR4 3200","PCI Express Revision 4.0", "Cooling device not included - Processor Only"],
-        "image":"images/products/ryzen9-5900x.jpg",
-        "all":"true"
-    },
-    {
-        "name":"Intel Core i7-10700 KA",
-        "brand":"Intel",
-        "price":"$380",
-        "category":"processors",
-        "specs":["Marvel Avengers Limited Special Edition","Includes a commemorative card inside of the box","8 Cores & 16 Threads","3.8 GHz Clock Speed","5.1 GHz Maximum Turbo Frequency","Compatible with Intel 400 series chipset based motherboards","LGA 1200 Socket","Intel UHD Graphics 630","Intel Turbo Boost Max Technology 3.0 support","Intel Optane Memory Support","No thermal solution included"],
-        "image":"images/products/i7-10700ka.webp",
-        "all":"true"
-    },
-    {
-        "name":"AMD Ryzen 3 3200 G",
-        "brand":"AMD",
-        "price":"$150",
-        "category":"processors",
-        "specs":["Built-In Radeon Vega 8 Graphics", "2nd GEN with Radeon Graphic","Socket AM4","Max Boost Frequency 4.0 GHz","L2 Cache 2MB","L3 Cache 4MB","Thermal Design Power 65W","With Wraith Stealth cooler"],
-        "image":"images/products/ryzen3-3200g.jpg",
-        "all":"true"
-    },
-    {
-        "name":"Intel Core i3-10300",
-        "brand":"Intel",
-        "price":"$175",
-        "category":"processors",
-        "specs":["CPU Socket LGA 1200","Comet Lake","Quad-Core","8 Threads","Operating Frequency 3.7 GHz","Max Turbo Frequency 4.40 GHz","Bus Speed 8 GT/s","L3 Cache 8MB","14nm 65W","64-Bit Support","Hyper-Threading Support","Memory Types DDR4 2666","Memory Channel 2","Virtualization Technology Support","Integrated Graphics Intel UHD Graphics 630","Graphics Base Frequency 350 MHz","Graphics Max Dynamic Frequency 1.15 GHz","PCI Express Revision 3.0","Max Number of PCI Express Lanes 16","Cooling Device Heatsink and fan included"],
-        "image":"images/products/i3-10300.jpg",
-        "all":"true"
-    },
-    {
-        "name":"AMD Ryzen 5 5600 X",
-        "brand":"AMD",
-        "price":"$300",
-        "category":"processors",
-        "specs":["Socket AM4","6-Core","12 Threads","Operating Frequency 3.7 GHz","Max Turbo Frequency 4.6 GHz","L2 Cache 3MB","L3 Cache 32MB","7nm 65W","64-Bit Support","Memory Types DDR4 3200","PCI Express Revision 4.0","Wraith Stealth Cooler"],
-        "image":"images/products/ryzen5-5600x.jpg",
-        "all":"true"
-    },
-    {
-        "name":"Intel Core i9-9900 KS",
-        "brand":"Intel",
-        "price":"$2000",
-        "category":"processors",
-        "specs":["CPU Socket Type LGA 1151 (300 Series)","Core Name Coffee Lake","8-Core","16 Threads","Operating Frequency 4.0 GHz","Max Turbo Frequency 5.0 GHz","Bus Speed 8 GT/s","L3 Cache 16MB","14nm 127W","64-Bit Support","Hyper-Threading Support","Memory Types DDR4 2666","Memory Channel 2","Virtualization Technology Support","Intel UHD Graphics 630","Graphics Base Frequency 350 MHz","Graphics Max Dynamic Frequency 1.2 GHz","PCI Express Revision 3.0","Max Number of PCI Express Lanes 16","Cooling device not included - Processor Only"],
-        "image":"images/products/i9-9900ks.jpg",
-        "all":"true"
-    },
-    {
-        "name":"",
-        "brand":"",
-        "price":"",
-        "category":"",
-        "specs":[""],
-        "image":"",
-        "all":"true"
-    },
-    {
-        "name":"",
-        "brand":"",
-        "price":"",
-        "category":"",
-        "specs":[""],
-        "image":"",
-        "all":"true"
-    },
-    {
-        "name":"",
-        "brand":"",
-        "price":"",
-        "category":"",
-        "specs":[""],
-        "image":"",
-        "all":"true"
-    },
-    {
-        "name":"",
-        "brand":"",
-        "price":"",
-        "category":"",
-        "specs":[""],
-        "image":"",
-        "all":"true"
-    },
-    {
-        "name":"",
-        "brand":"",
-        "price":"",
-        "category":"",
-        "specs":[""],
-        "image":"",
-        "all":"true"
-    },
-    {
-        "name":"",
-        "brand":"",
-        "price":"",
-        "category":"",
-        "specs":[""],
-        "image":"",
-        "all":"true"
-    },
-    {
-        "name":"",
-        "brand":"",
-        "price":"",
-        "category":"",
-        "specs":[""],
-        "image":"",
-        "all":"true"
-    },
-    {
-        "name":"",
-        "brand":"",
-        "price":"",
-        "category":"",
-        "specs":[""],
-        "image":"",
-        "all":"true"
-    },
-    {
-        "name":"",
-        "brand":"",
-        "price":"",
-        "category":"",
-        "specs":[""],
-        "image":"",
-        "all":"true"
-    },
-    {
-        "name":"",
-        "brand":"",
-        "price":"",
-        "category":"",
-        "specs":[""],
-        "image":"",
-        "all":"true"
-    },
-    {
-        "name":"",
-        "brand":"",
-        "price":"",
-        "category":"",
-        "specs":[""],
-        "image":"",
-        "all":"true"
-    },
-    {
-        "name":"",
-        "brand":"",
-        "price":"",
-        "category":"",
-        "specs":[""],
-        "image":"",
-        "all":"true"
-    },
-    {
-        "name":"",
-        "brand":"",
-        "price":"",
-        "category":"",
-        "specs":[""],
-        "image":"",
-        "all":"true"
-    },
-    {
-        "name":"",
-        "brand":"",
-        "price":"",
-        "category":"",
-        "specs":[""],
-        "image":"",
-        "all":"true"
-    },
-    {
-        "name":"",
-        "brand":"",
-        "price":"",
-        "category":"",
-        "specs":[""],
-        "image":"",
-        "all":"true"
-    },
-    {
-        "name":"",
-        "brand":"",
-        "price":"",
-        "category":"",
-        "specs":[""],
-        "image":"",
-        "all":"true"
-    },
-    {
-        "name":"",
-        "brand":"",
-        "price":"",
-        "category":"",
-        "specs":[""],
-        "image":"",
-        "all":"true"
-    },
-    {
-        "name":"",
-        "brand":"",
-        "price":"",
-        "category":"",
-        "specs":[""],
-        "image":"",
-        "all":"true"
-    },
-    {
-        "name":"",
-        "brand":"",
-        "price":"",
-        "category":"",
-        "specs":[""],
-        "image":"",
-        "all":"true"
-    },
-    {
-        "name":"",
-        "brand":"",
-        "price":"",
-        "category":"",
-        "specs":[""],
-        "image":"",
-        "all":"true"
-    }
-]
+    [
+        {
+            "name" : "AMD Ryzen 5 3600",
+            "brand": "AMD",
+            "price" : 200,
+            "category" : "processors",
+            "specs": ["3rd Gen Ryzen","Socket AM4","Max Boost Frequency: 4.2 GHz", "DDR4 Support", "L2 Cache 3MB", "L3 Cache 32MB", "Thermal Design Power 65W", "Others: With Wraith Stealth cooler"],
+            "image" : "images/products/ryzen5-3600.jpg",
+            "all":"true"
+        },
+        {
+            "name" : "Intel Core i5-10600 K",
+            "brand": "Intel",
+            "price" : 275,
+            "category" : "processors",
+            "specs":["CPU Socket LGA 1200", "14 nm Comet Lake 125W", "6-Core", "12-Threads", "Operating Frequency 4.1 GHz", "Max Turbo Frequency 4.80 GHz", "Bus Speed 8 GT/s","L3 Cache 12MB", "64-Bit Support","Hyper-Threading Support", "Memory Types DDR4 2666", "Memory Channel 2","Virtualization Technology Support","Integrated Graphics: Intel UHD Graphics 630", "Graphics Base Frequency 350 MHz","Graphics Max Dynamic Frequency 1.2 GHz","PCI Express Revision 3.0","Max Number of PCI Express Lanes: 16","Cooling Device not included - Processor Only"],
+            "image" :"images/products/i5-10400.jpg",
+            "all":"true"
+        },
+        {
+            "name":"AMD Ryzen 7 5800 X",
+            "brand":"AMD",
+            "price":450,
+            "category":"processors",
+            "specs":["CPU Socket AM4", "8-Core", "16 Threads", "Operating Frequency 3.8 GHz", "Max Turbo Frequency 4.7 GHz", "L2 Cache 4MB", "L3 Cache 32MB", "Manufacturing Tech 7nm", "64-Bit Support", "Memory Types: DDR4 3200", "PCI Express Revision 4.0", "Thermal Design Power 105W", "Cooling device not included - Processor Only"],
+            "image":"images/products/ryzen7-5800x.jpg",
+            "all":"true"
+        },
+        {
+            "name":"Intel Core i9-10980 XE",
+            "brand":"Intel",
+            "price":1000,
+            "category":"processors",
+            "specs":["CPU Socket Type LGA 2066", "14nm Cascade Lake 165W", "18-Core","36 Threads","Operating Frequency 3.0 GHz","Max Turbo Frequency: Intel Turbo Boost 2.0 Max Technology Frequency (GHz): 4.6 - Intel Turbo Boost 3.0 Max Technology Frequency (GHz): 4.8","Bus Speed 8 GT/s","L3 Cache 24.75MB","64-Bit Support","Hyper-Threading Support","Memory Types DDR4 2933","Memory Channel 4","PCI Express Revision 3.0","Max Number of PCI Express Lanes 48","Cooling device not included - Processor Only"],
+            "image":"images/products/i9-10980xe.jpg",
+            "all":"true"
+        },
+        {
+            "name":"AMD Ryzen 9 5900 X",
+            "brand":"AMD",
+            "price":550,
+            "category":"processors",
+            "specs":["Socket AM4", "12-Core","24 Threads","Operating Frequency 3.7 GHz","Max Turbo Frequency 4.8 GHz","L2 Cache 6MB","L3 Cache 64MB","7nm 105W","64-Bit Support","Memory Types DDR4 3200","PCI Express Revision 4.0", "Cooling device not included - Processor Only"],
+            "image":"images/products/ryzen9-5900x.jpg",
+            "all":"true"
+        },
+        {
+            "name":"Intel Core i7-10700 KA",
+            "brand":"Intel",
+            "price":380,
+            "category":"processors",
+            "specs":["Marvel Avengers Limited Special Edition","Includes a commemorative card inside of the box","8 Cores & 16 Threads","3.8 GHz Clock Speed","5.1 GHz Maximum Turbo Frequency","Compatible with Intel 400 series chipset based motherboards","LGA 1200 Socket","Intel UHD Graphics 630","Intel Turbo Boost Max Technology 3.0 support","Intel Optane Memory Support","No thermal solution included"],
+            "image":"images/products/i7-10700ka.webp",
+            "all":"true"
+        },
+        {
+            "name":"AMD Ryzen 3 3200 G",
+            "brand":"AMD",
+            "price":150,
+            "category":"processors",
+            "specs":["Built-In Radeon Vega 8 Graphics", "2nd GEN with Radeon Graphic","Socket AM4","Max Boost Frequency 4.0 GHz","L2 Cache 2MB","L3 Cache 4MB","Thermal Design Power 65W","With Wraith Stealth cooler"],
+            "image":"images/products/ryzen3-3200g.jpg",
+            "all":"true"
+        },
+        {
+            "name":"Intel Core i3-10300",
+            "brand":"Intel",
+            "price":175,
+            "category":"processors",
+            "specs":["CPU Socket LGA 1200","Comet Lake","Quad-Core","8 Threads","Operating Frequency 3.7 GHz","Max Turbo Frequency 4.40 GHz","Bus Speed 8 GT/s","L3 Cache 8MB","14nm 65W","64-Bit Support","Hyper-Threading Support","Memory Types DDR4 2666","Memory Channel 2","Virtualization Technology Support","Integrated Graphics Intel UHD Graphics 630","Graphics Base Frequency 350 MHz","Graphics Max Dynamic Frequency 1.15 GHz","PCI Express Revision 3.0","Max Number of PCI Express Lanes 16","Cooling Device Heatsink and fan included"],
+            "image":"images/products/i3-10300.jpg",
+            "all":"true"
+        },
+        {
+            "name":"AMD Ryzen 5 5600 X",
+            "brand":"AMD",
+            "price":300,
+            "category":"processors",
+            "specs":["Socket AM4","6-Core","12 Threads","Operating Frequency 3.7 GHz","Max Turbo Frequency 4.6 GHz","L2 Cache 3MB","L3 Cache 32MB","7nm 65W","64-Bit Support","Memory Types DDR4 3200","PCI Express Revision 4.0","Wraith Stealth Cooler"],
+            "image":"images/products/ryzen5-5600x.jpg",
+            "all":"true"
+        },
+        {
+            "name":"Intel Core i9-9900 KS",
+            "brand":"Intel",
+            "price":2000,
+            "category":"processors",
+            "specs":["CPU Socket Type LGA 1151 (300 Series)","Core Name Coffee Lake","8-Core","16 Threads","Operating Frequency 4.0 GHz","Max Turbo Frequency 5.0 GHz","Bus Speed 8 GT/s","L3 Cache 16MB","14nm 127W","64-Bit Support","Hyper-Threading Support","Memory Types DDR4 2666","Memory Channel 2","Virtualization Technology Support","Intel UHD Graphics 630","Graphics Base Frequency 350 MHz","Graphics Max Dynamic Frequency 1.2 GHz","PCI Express Revision 3.0","Max Number of PCI Express Lanes 16","Cooling device not included - Processor Only"],
+            "image":"images/products/i9-9900ks.jpg",
+            "all":"true"
+        },
+        {
+            "name":"AMD Ryzen Threadripper 3990X",
+            "brand":"AMD",
+            "price": 4000,
+            "category":"processors",
+            "specs":["Socket sTRX4","64-Core","128 Threads","Operating Frequency 2.9 GHz","Max Turbo Frequency Up to 4.3 GHz","L1 Cache 4MB","L2 Cache 32MB","L3 Cache 256MB","Manufacturing Tech 7nm","Memory Types DDR4 3200","Memory Channel 4","PCI Express Revision 4.0","Thermal Design Power 280W"],
+            "image":"images/products/threadripper.jpg",
+            "all":"true"
+        },
+        {
+            "name":"Intel Core i9-10900 K",
+            "brand":"Intel",
+            "price": 540,
+            "category":"processors",
+            "specs":["CPU Socket Type LGA 1200","10-Core","20 Threads","Operating Frequency 3.7 GHz","Max Turbo Frequency 5.30 GHz","Bus Speed 8 GT/s","L3 Cache 20MB","Manufacturing Tech 14nm","64-Bit Support","Hyper-Threading Support","Memory Types DDR4 2933","Memory Channel 2","Virtualization Technology Support","Intel UHD Graphics 630","Graphics Base Frequency 350 MHz","Graphics Max Dynamic Frequency 1.2 GHz","PCI Express Revision 3.0","Max Number of PCI Express Lanes 16","Thermal Design Power 125W","Cooling device not included - Processor Only"],
+            "image":"images/products/i9-10900k.jpg",
+            "all":"true"
+        },
+        {
+            "name":"EVGA GeForce RTX 2060",
+            "brand":"Nvidia",
+            "price": 370,
+            "category":"graphics",
+            "specs": ["Boost Clock: 1755 MHz", "Real-Time RAY TRACING in games for cutting-edge, hyper-realistic graphics", "Dual HDB Fans offer higher performance cooling and much quieter acoustic noise", "Built for EVGA Precision X1 - EVGA's all-new tuning utility monitors your graphics card and gives you the power to overclock like a pro!"],
+            "image":"images/products/rtx2060.jpg",
+            "all":"true"
+        },
+        {
+            "name":"GIGABYTE Radeon RX 5700 XT",
+            "brand":"AMD",
+            "price":420,
+            "category":"graphics",
+            "specs": ["8GB 256-Bit GDDR6", "Core Clock 1650 MHz", "Boost Clock 1905 MHz", "1 x HDMI 2.0b 3 x DisplayPort 1.4", "2560 Stream Processors", "PCI Express 4.0 x16"],
+            "image":"images/products/rx5700xt.jpg",
+            "all":"true"
+        },
+        {
+            "name":"EVGA GeForceGTX 1660 Ti",
+            "brand":"Nvidia",
+            "price":300,
+            "category":"graphics",
+            "specs":["Boost Clock: 1845 MHz", "All-new NVIDIA Turing architecture to give you incredible new levels of gaming realism, speed, power efficiency and immersion", "Dual Fans offer higher performance cooling and low acoustic noise", "Built for EVGA Precision X1 - EVGA's all-new tuning utility monitors your graphics card and gives you the power to overclock like a pro!"],
+            "image":"images/products/gtx1660ti.jpg",
+            "all":"true"
+        },
+        {
+            "name":"GIGABYTE Radeon RX 580",
+            "brand":"AMD",
+            "price":200,
+            "category":"graphics",
+            "specs":["8GB 256-Bit GDDR5", "Core Clock OC mode: up to 1355 MHz", "Gaming mode: up to 1340 MHz", "1 x HDMI 2.0b 3 x DisplayPort 1.4", "2304 Stream Processors", "PCI Express 3.0"],
+            "image":"images/products/rx580.jpg",
+            "all":"true"
+        },
+        {
+            "name":"GIGABYTE GeForce GTX 1050 Ti",
+            "brand":"Nvidia",
+            "price":160,
+            "category":"graphics",
+            "specs": ["4GB 128-Bit GDDR5", "Core Clock 1316 MHz in OC Mode", "1290 MHz in Gaming", "Boost Clock 1430 MHz in OC Mode", "1392 MHz in Gaming", "1 x Dual-Link DVI-D 1 x HDMI 2.0b 1 x DisplayPort 1.4", "PCI Express 3.0 x16"],
+            "image":"images/products/gtx1050ti.jpg",
+            "all":"true"
+        },
+        {
+            "name":"ASRock Phantom Gaming Radeon RX 5600 XT",
+            "brand":"AMD",
+            "price":290,
+            "category":"graphics",
+            "specs": ["6GB 192-Bit GDDR6", "Core Clock 1530 MHz", "Boost Clock 1750 MHz", "1 x HDMI 2.0b 3 x DisplayPort 1.4", "2304 Stream Processors", "PCI Express 4.0 x16"],
+            "image":"images/products/rx5600xt.jpg",
+            "all":"true"
+        },
+        {
+            "name":"GIGABYTE Radeon RX 5500 XT",
+            "brand":"AMD",
+            "price":210,
+            "category":"graphics",
+            "specs": ["8GB 128-Bit GDDR6", "Boost Clock 1845 MHz", "1 x HDMI 2.0b 3 x DisplayPort 1.4", "1408 Stream Processors", "PCI Express 4.0 x8"],
+            "image":"images/products/rx5500xt.jpg",
+            "all":"true"
+        },
+        {
+            "name":"MSI GeForce GTX 1660 Ti Gaming X",
+            "brand":"Nvidia",
+            "price":360,
+            "category":"graphics",
+            "specs": ["6GB 192-Bit GDDR6", "Boost Clock 1875 MHz", "1 x HDMI 2.0b 3 x DisplayPort 1.4", "1536 CUDA Cores", "PCI Express 3.0 x16"],
+            "image":"images/products/msigtx1660ti.jpg",
+            "all":"true"
+        },
+        {
+            "name":"ASUS TUF Gaming GeForce GTX 1650",
+            "brand":"Nvidia",
+            "price":160,
+            "category":"graphics",
+            "specs": ["4GB 128-Bit GDDR6", "Core Clock 1410 MHz", "Boost Clock 1755 MHz (Gaming Mode), 1785 MHz (OC Mode)", "1 x DVI-D 1 x HDMI 2.0b 1 x DisplayPort 1.4", "896 CUDA Cores", "PCI Express 3.0"],
+            "image":"images/products/gtx1650.jpg",
+            "all":"true"
+        },
+        {
+            "name":"MSI GeForce RTX 3070 Gaming X Trio",
+            "brand":"MSI",
+            "price": 580,
+            "category":"graphics",
+            "specs":["8GB 256-Bit GDDR6","1 x HDMI 2.1 3 x DisplayPort 1.4a","5888 CUDA Cores","PCI Express 4.0"],
+            "image":"images/products/gtx3070.jpg",
+            "all":"true"
+        },
+        {
+            "name":"MSI GeForce GTX 1660 Ti Armor OC",
+            "brand":"MSI",
+            "price": 660,
+            "category":"graphics",
+            "specs":["6GB 192-Bit GDDR6","Boost Clock 1860 MHz","1 x HDMI 2.0b 3 x DisplayPort 1.4","1536 CUDA Cores","PCI Express 3.0 x16"],
+            "image":"images/products/gtx1660ti-armor.jpg",
+            "all":"true"
+        },
+        {
+            "name":"EVGA GeForce RTX 3080 FTW3 ULTRA",
+            "brand":"EVGA",
+            "price": 820,
+            "category":"graphics",
+            "specs":["Real Boost Clock: 1800 MHz","Memory Detail: 10240MB GDDR6X","Real-Time RAY TRACING in games for cutting-edge, hyper-realistic graphics.","Triple HDB Fans offer higher performance cooling and much quieter acoustic noise.","All-Metal Backplate & Adjustable ARGB."],
+            "image":"images/products/rtx3080.jpg",
+            "all":"true"
+        },
+        {
+            "name":"ASUS TUF GAMING B550-PLUS",
+            "brand":"AMD",
+            "price":160,
+            "category":"motherboards",
+            "specs":["BIOS update might require for AMD Zen 3 Ryzen 5000 series CPU","AMD AM4 Socket and PCIe 4.0: The perfect pairing for 3rd Gen AMD Ryzen CPUs","Robust Power Design: 8+2 DrMOS power stages with high-quality alloy chokes and durable capacitors to provide reliable power for the last AMD high-count-core CPUs","Optimized Thermal Solution: Fanless VRM and chipset heatsink, multiple hybrid fan headers and Fan Xpert 4 or the UEFI Q-Fan Control utility","High-performance Gaming Networking: 2.5 Gb LAN with ASUS LANGuard","Best Gaming Connectivity: Supports HDMI 2.1 (4K@60HZ) and DisplayPort 1.4 output, featuring dual M.2 slots (NVMe SSD) - one with PCIe 4.0 x4 connectivity, front panel USB 3.2 Gen 1 connector, USB 3.2 Gen 2 Type-C & Type-A ports and Thunderbolt header, 1 x SPI TPM header","Industry-leading Gaming Audio & AI Noise Cancelling Mic Technology: High fidelity audio from a SupremeFX S1220A codec with DTS Sound Unbound and Sonic Studio III draws you deeper into the action"],
+            "image":"images/products/asus-b550-plus.jpg",
+            "all":"true"
+        },
+        {
+            "name":"ASRock B550 TAICHI",
+            "brand":"AMD",
+            "price": 300,
+            "category":"motherboards",
+            "specs":["BIOS update might require for AMD Zen 3 Ryzen 5000 series CPU","AMD B550","Supports 3rd Gen AMD AM4 Ryzen / future AMD Ryzen Processors","AMD Ryzen series CPUs (Matisse) support DDR4 4733+(OC)/ 4666(OC)/ 4600(OC)/ 4533(OC)/ 4466(OC)/ 4400(OC)/ 4333(OC)/ 4266(OC)/ 4200(OC)/ 4133(OC)/ 4000(OC)/ 3866(OC)/ 3800(OC)/ 3733(OC)/ 3600(OC)/ 3466(OC)/ 3200/ 2933/ 2667/ 2400/ 2133 ECC & non-ECC, un-buffered memory","AMD Ryzen series APUs (Renoir) support DDR4 4733+(OC)/ 4666(OC)/ 4600(OC)/ 4533(OC)/ 4466(OC)/ 4400(OC)/ 4333(OC)/ 4266(OC)/ 4200(OC)/ 4133(OC)/ 4000(OC)/ 3866(OC)/ 3800(OC)/ 3733(OC)/ 3600(OC)/ 3466(OC)/ 3200/ 2933/ 2667/ 2400/ 2133 ECC & non-ECC, un-buffered memory"],
+            "image":"images/products/b550-taichi.jpg",
+            "all":"true"
+        },
+        {
+            "name":"GIGABYTE X570 AORUS ELITE WIFI",
+            "brand":"AMD",
+            "price": 210,
+            "category":"motherboards",
+            "specs":["Support for Ryzen 5000 Series with BIOS UPDATE","Supports AMD Ryzen 5000 Series/3rd Gen Ryzen/2nd Gen Ryzen / 3nd Gen Ryzen with Radeon Vega Graphics/2nd Gen Ryzen with Radeon Vega Graphics/Ryzen with Radeon Vega Graphics Processors","Dual Channel ECC/Non-ECC Unbuffered DDR4, 4 DIMMs","12+2 Phases Digital VRM","Advanced Heatsink Design with Enlarge Heatsink","Dual Ultra-Fast NVMe PCIe 4.0/3.0 x4 M.2 & Single Thermal Guard","Intel Dual-Band 802.11 ac WI-FI & BT 4.2","AMP-UP Audio with ALC1200","Intel Gigabit LAN","RGB FUSION 2.0 with Multi-Zone Addressable LED Light Show Design","Smart Fan 5 - Hybrid Fan Headers with FAN STOP","Front Panel USB 3.2 Gen 2 Type-C","I/O Shield Armor","Q-Flash Plus Update BIOS Without Installing CPU, Memory, GPU"],
+            "image":"images/products/x570-aorus-elite.jpg",
+            "all":"true"
+        },
+        {
+            "name":"MSI MEG X570 UNIFY",
+            "brand":"AMD",
+            "price": 300,
+            "category":"motherboards",
+            "specs":["AMD X570","Support for 3rd Gen AMD Ryzen Processors and future AMD Ryzen processors with BIOS update","3rd Gen AMD Ryzen Processors support DDR4 4600/ 4533/ 4400/ 4266/ 4133/ 4000/ 3866/ 3733/ 3600/ 3466/ 3200/ 3066/ 3000/ 2933/ 2800/ 2667 MHz by A-XMP OC MODE, and 3200/ 3066/ 3000/ 2933/ 2800/ 2667/ 2400/ 2133/ 1866 MHz by JEDEC","2nd Gen AMD Ryzen Processors, 1st and 2nd Gen AMD Ryzen with Radeon Vega Graphics Processors support DDR4 3600/ 3466/ 3200/ 3066/ 3000/ 2933/ 2800/ 2667 MHz by A-XMP OC MODE, and 3200/ 3066/ 3000/ 2933/ 2800/ 2667/ 2400/ 2133/ 1866 MHz by JEDEC"],
+            "image":"images/products/meg-x570.jpg",
+            "all":"true"
+        },
+        {
+            "name":"ASUS ROG ZENITH II EXTREME ALPHA TRX40",
+            "brand":"AMD",
+            "price": 800,
+            "category":"motherboards",
+            "specs":["AMD TRX40","Socket sTRX4 for 3rd Gen Ryzen Threadripper Desktop processors","DDR4 4733+(O.C)/ 4600(O.C.)/ 3466(O.C.)/ 3200(O.C.)/ 3000(O.C.)/ 2933(O.C.)/ 2800(O.C.)/ 2666/ 2400/ 2133 MHz ECC & Non-ECC Un-buffered Memory"],
+            "image":"images/products/asus-trx40.jpg",
+            "all":"true"
+        },
+        {
+            "name":"GIGABYTE TRX40 AORUS XTREME",
+            "brand":"AMD",
+            "price": 850,
+            "category":"motherboards",
+            "specs":["Supports 3rd Gen AMD Ryzen Threadripper Processors","Quad Channel ECC/Non-ECC Unbuffered DDR4, 8 DIMMs","16+3 Phases Infineon Digital VRM Solution with 70A Power Stage","Thermal Reactive Armor Design with Fins-Array Heatsink, 8mm Mega-Heatpipe and NanoCarbon Baseplate","Intel X550-AT2 Dual 10GbE BASE-T LAN with cFosSpeed","4 Ultra-Fast NVMe PCIe 4.0 x4 M.2 with Thermal Guards","Onboard Intel WiFi 6 802.11 ax 2T2R & BT 5 with 2X AORUS Antenna","130dB SNR AMP-UP Audio with High-End ESS SABRE 9218 DAC, ALC1220-VB and WIMA Audio Capacitors","Exclusive AORUS Gen4 AIC Adaptor for Extra 4 NVMe PCIe 4.0/3.0 x4 M.2","USB TurboCharger for Mobile Device Fast Charge Support","RGB FUSION with Multi-Zone Addressable LED Light Show Design, Support Addressable LED & RGB LED Strips","Smart Fan 5 features Multiple Temperature Sensors, Hybrid Fan Headers with FAN STOP and Noise Detection","Front & Rear USB 3.2 Gen2 Type-C Header","Q-Flash Plus Update BIOS Without Installing CPU, Memory and Graphics Card"],
+            "image":"images/products/gigabyte-trx40.jpg",
+            "all":"true"
+        },
+        {
+            "name":"ASUS PRIME Z490-P",
+            "brand":"Intel",
+            "price": 160,
+            "category":"motherboards",
+            "specs":["Intel LGA 1200 Socket: Designed to unleash the maximum performance of 10th Gen Intel Core processors","Enhanced Power Solution: 10+1 DrMOS power stages, 6-layer PCB, ProCool sockets, alloy chokes and durable capacitors for stable power delivery","Comprehensive Cooling: VRM heatsink, PCH heatsink, hybrid fan headers and Fan Xpert 4 utility","Boosted Memory Performance: ASUS OptiMem II proprietary trace layout allows memory kits to operate at higher frequencies with lower voltages to maximize system performance","Ultrafast Connectivity: Dual M.2, 1Gb Ethernet, USB 3.2 Gen 2 Type-A and Thunderbolt 3 support"],
+            "image":"images/products/asus-z490-p.jpg",
+            "all":"true"
+        },
+        {
+            "name":"GIGABYTE Z490 VISION G",
+            "brand":"Intel",
+            "price": 200,
+            "category":"motherboards",
+            "specs":["Supports 10th Gen Intel Core Series Processors","Direct 12 Phases Digital VRM with 50A Smart Power Stage","Advanced Thermal Design with Micro-Block Surface Heatsink and Next Generation Direct Touch Heatpipe","Dual Channel Non-ECC Unbuffered DDR4, 4 DIMMs","Intel 2.5 GbE LAN","2 x M.2 Thermal Guard","Realtek ALC1220-VB2 120dB with Nichicon MW","RGB Fusion 2.0","Smart Fan 5 Hybrid Fan Headers with smart fan functions (Fan Stop, PWM Controls, Noise Detection)","Rear - 3 x USB 3.2 Gen2 (A), 1 x USB 3.2 Gen2 (C), 4 x USB 3.2 Gen1, 2 x USB 2.0","Front - 1 x USB 3.2 Gen2 (C), 2 x USB 3.2 Gen1, 4 x USB 2.0","Integrated I/O Shield","Q-Flash Plus Update BIOS Without Installing CPU, Memory or GPU","Hi-Res Audio Certified, PCIe 4.0 Grade Design"],
+            "image":"images/products/gigabyte-z490.jpg",
+            "all":"true"
+        },
+        {
+            "name":"MSI MPG Z490 GAMING CARBON WIFI",
+            "brand":"Intel",
+            "price": 260,
+            "category":"motherboards",
+            "specs":["Intel Z490","Supports 10th Gen Intel Core and Pentium Gold / Celeron processors for LGA1200 socket","Supports 1R 2933/ 2666/ 2133 MHz","1DPC 1R Max speed up to 4800+ MHz","1DPC 2R Max speed up to 4266+ MHz","2DPC 1R Max speed up to 4400+ MHz","2DPC 2R Max speed up to 4000+ MHz"],
+            "image":"images/products/msi-z490.jpg",
+            "all":"true"
+        },
+        {
+            "name":"MSI MEG Z490 ACE",
+            "brand":"Intel",
+            "price": 400,
+            "category":"motherboards",
+            "specs":["Intel Z490","Supports 10th Gen Intel Core and Pentium Gold / Celeron processors for LGA 1200 socket","Supports 1R 2933/ 2666/ 2133 MHz","1DPC 1R Max speed up to 4800+ MHz","1DPC 2R Max speed up to 4266+ MHz","2DPC 1R Max speed up to 4400+ MHz","2DPC 2R Max speed up to 4000+ MHz"],
+            "image":"images/products/msi-z490-meg.jpg",
+            "all":"true"
+        },
+        {
+            "name":"ASRock Z490 AQUA",
+            "brand":"Intel",
+            "price": 1100,
+            "category":"motherboards",
+            "specs":["Supports 10th Gen and future generation Intel Core Processors (Socket 1200)","Supports DDR4 4700+ (OC)","3 PCIe 3.0 x16, 2 PCIe 2.0 x1","NVIDIA Quad SLI, AMD 3-Way CrossFireX","7.1 CH HD Audio (Realtek ALC1220 Audio Codec)","ESS SABRE9218DAC (130dB SNR) + WIMA Audio Caps","8 SATA3, 1 Ultra M.2 (PCIe Gen3 x4), 2 Ultra M.2 (PCIe Gen3 x4 & SATA3)","2 Intel Thunderbolt 3 Type-C","5 USB 3.2 Gen2 10Gb/s (Front: 1 Type-C, Rear: 1 Type-C, 3 Type-A)","8 USB 3.2 Gen1 (4 Front, 4 Rear)","AQUANTIA 10 Gigabit LAN + Wi-Fi 6 802.11ax (2.4Gbps) + Dragon 2.5 Gigabit LAN","Status OLED + Polychrome SYNC"],
+            "image":"images/products/z490-aqua.jpg",
+            "all":"true"
+        },
+        {
+            "name":"GIGABYTE Z490 AORUS XTREME WATERFORCE",
+            "brand":"Intel",
+            "price": 1300,
+            "category":"motherboards",
+            "specs":["Supports 10th Gen Intel Core Series Processors","16 Phases Digital VRM with 90A Smart Power Stage","AORUS Xtreme Waterforce Full Coverage Monoblock","NanoCarbon Baseplate","Shielded Xtreme Memory Routing with Tantalum Polymer Capacitors Array","Dual Channel Non-ECC Unbuffered DDR4, 4 DIMMs","AQUANTIA 10GbE LAN + Intel 2.5 GbE LAN","3 x M.2 Enlarged Next Generation Thermal Guard","Intel WiFi 6 and Bluetooth 5 2x2 with AORUS Antennas","AMP UP Audio ALC1220-VB2 with ESS Sabre ES9018K2M Rear Audio DAC and ESS Sabre ES9218 Front Audio DAC","RGB Fusion 2.0","Smart Fan 5 Hybrid Fan Headers with smart fan functions (Fan Stop, PWM Controls, Noise Detection)","Rear 4 x USB 3.2 Gen 2 Type A, 2 x Thunderbolt 3 Type C, 2 x USB 3.2 Gen 1 Type A, 2 x USB 2.0","Front 1 x USB 3.1 Gen 2 Type C, 2 x USB 3.2 Gen 1, 4 x USB 2.0","Integrated I/O Shield","Q-Flash Plus Update BIOS Without Installing CPU, Memory or GPU","Intel Thunderbolt 3, AORUS Fan Commander, PCIe 4.0 Grade Design"],
+            "image":"images/products/z490-waterforce.jpg",
+            "all":"true"
+        },
+        {
+            "name":"EVGA 500 BA",
+            "brand":"EVGA",
+            "price": 50,
+            "category":"power supplies",
+            "specs":["80 PLUS Bronze certified, with 85% efficiency or higher under typical loads","Single 12V. Rail with DC-DC Converter to improve 3.3V/5V stability","Active Power Factor Correction (PFC)","Heavy-duty protections, including OVP (Over Voltage Protection), UVP (Under Voltage Protection), OCP (Over Current Protection), OPP (Over Power Protection), SCP (Short Circuit Protection), and OTP (Over Temperature Protection)","3 Year Warranty"],
+            "image":"images/products/evga500.jpg",
+            "all":"true"
+        },
+        {
+            "name":"CORSAIR CV550",
+            "brand":"CORSAIR",
+            "price": 65,
+            "category":"power supplies",
+            "specs":["80 PLUS Bronze Certified: Provides up to 88% operational efficiency, generating less heat and lowering your energy costs","Full Continuous Power: CORSAIR CV Series power supplies are guaranteed to deliver their full rated wattage of continuous power","Low-Noise Cooling: A 120mm thermally controlled low-noise cooling fan only spins at high speed when your power supply is under heavy stress, slowing down for quieter operation at lower loads","Compact Casing: 125mm length ensures an easy fit in almost all modern PC cases","Black Sleeving and Casing: Black sleeved cables and a black powder-coated casing seamlessly fits your PC’s style","Three-Year Warranty: Your guarantee of reliable operation, backed by the CORSAIR global technical support team"],
+            "image":"images/products/corsair550.jpg",
+            "all":"true"
+        },
+        {
+            "name":"Thermaltake Toughpower GX2 600W",
+            "brand":"Thermaltake",
+            "price": 80,
+            "category":"power supplies",
+            "specs":["Intel ATX 12V v2.3 & EPS 12V","Non-Modular","80 PLUS GOLD Certified","100 - 240 V 47 - 63 Hz","+3.3V@20A, +5V@20A, +12V@49A, -12V@0.3A, +5VSB@2.5A"],
+            "image":"images/products/thermaltake600.jpg",
+            "all":"true"
+        },
+        {
+            "name":"EVGA SuperNOVA 650 GA",
+            "brand":"EVGA",
+            "price": 120,
+            "category":"power supplies",
+            "specs":["ATX12V","Full Modular","80 PLUS GOLD Certified","100 - 240 V 50/60 Hz","+3.3V@20A, +5V@20A, +12V@54.1A, -12V@0.3A, +5VSB@3A"],
+            "image":"images/products/evga650.jpg",
+            "all":"true"
+        },
+        {
+            "name":"GIGABYTE P750GM",
+            "brand":"GIGABYTE",
+            "price": 130,
+            "category":"power supplies",
+            "specs":["750W Capacity with Single +12V Rail","80 PLUS Gold Efficiency","Fully modular design","120mm Smart Hydraulic Bearing Fan","High Quality Reliable Japanese capacitors","Powerful single +12V rail","OVP/OPP/SCP/UVP/OCP/OTP Power Protection","Compact size","5 years warranty"],
+            "image":"images/products/gigabyte750.jpg",
+            "all":"true"
+        },
+        {
+            "name":"EVGA SuperNOVA 750 GA",
+            "brand":"EVGA",
+            "price": 130,
+            "category":"power supplies",
+            "specs":["ATX12V","Full Modular","80 PLUS GOLD Certified","100 - 240 V 50/60 Hz","+3.3V@20A, 5V@20A, +12V@62.5A, -12V@0.3A, +5VSB@3A"],
+            "image":"images/products/evga750.jpg",
+            "all":"true"
+        },
+        {
+            "name":"CORSAIR RM750x",
+            "brand":"CORSAIR",
+            "price": 140,
+            "category":"power supplies",
+            "specs":["80 PLUS Gold certified for lower power consumption, less noise and cooler temperatures.","Tuned for low noise operation even at full load.","Zero RPM fan mode for near-silent operation at low to medium loads.","100% industrial-grade, 105°C rated Japanese capacitors ensure unwavering power and reliability.","Fully modular cables, so you only connect the cables your system needs","Compact 160mm size for easier builds. (RM550x, RM650x, RM750x, RM850x)","Compact 180mm size for easier builds, (RM1000x)","Ten-year warranty for complete peace of mind."],
+            "image":"images/products/corsair750.jpg",
+            "all":"true"
+        },
+        {
+            "name":"CORSAIR RM750",
+            "brand":"CORSAIR",
+            "price":130,
+            "category":"power supplies",
+            "specs":["80 PLUS Gold Certified: High efficiency operation for lower power consumption, less noise and cooler temperatures.","Tuned for Low Noise Operation: A 140mm rifle bearing fan with a specially calculated fan curve ensures that fan noise is kept to a minimum, even at full load.","105°C-Rated Capacitors: Industrial-grade capacitors deliver solid electrical performance and reliability.","Microsoft Modern Standby Compatible: Extremely fast wake-from-sleep times and better low-load efficiency.","Zero RPM Fan Mode: At low and medium loads the cooling fan switches off entirely for near-silent operation.","Fully Modular Cables: Only connect the cables your system needs, making clean and tidy builds easier.","SLI Ready: Power multiple GPUs for maximum gaming performance.","Compact Size: A 160mm-long casing ensures an easy fit in almost all modern enthusiast PC cases.","Ten-Year Warranty: Your guarantee of reliable operation that will last across several system builds."],
+            "image":"images/products/corsair750x.jpg",
+            "all":"true"
+        },
+        {
+            "name":"GIGABYTE P850GM",
+            "brand":"GIGABYTE",
+            "price": 130,
+            "category":"power supplies",
+            "specs":["ATX 12V v2.31","Full Modular","80 PLUS GOLD Certified","100 - 240 V 60 - 50 Hz","+3.3V@20A, +5V@20A, +12V@70.8A, -12V@0.3A, +5VSB@3A"],
+            "image":"images/products/gigabyte850.jpg",
+            "all":"true"
+        },
+        {
+            "name":"EVGA SuperNOVA 850 GA",
+            "brand":"EVGA",
+            "price": 160,
+            "category":"power supplies",
+            "specs":["ATX12V","Full Modular","80 PLUS GOLD Certified","100 - 240 V 50/60 Hz","+3.3V@20A, +5V@20A, +12V@70.8A, -12V@0.3A, +5VSB@3A"],
+            "image":"images/products/evga850.jpg",
+            "all":"true"
+        },
+        {
+            "name":"EVGA SuperNova 1000 P2",
+            "brand":"EVGA",
+            "price": 360,
+            "category":"power supplies",
+            "specs":["ATX12V / EPS12V","Full Modular","80 PLUS PLATINUM Certified","100 - 240 V 50/60 Hz","+5V@20A, +3.3V@20A, +12V@83.3A, -12V@0.5A, +5Vsb@2.5A"],
+            "image":"images/products/evga1000.jpg",
+            "all":"true"
+        },
+        {
+            "name":"CORSAIR HX1200i",
+            "brand":"CORSAIR",
+            "price": 375,
+            "category":"power supplies",
+            "specs":["ATX12V / EPS12V","Full Modular","80 PLUS PLATINUM Certified","100 - 240 V 47 - 63 Hz","+3.3V@30A, +5V@30A, +12V@100A, -12V@0.8A, +5VSB@3.5A"],
+            "image":"images/products/corsair1200.jpg",
+            "all":"true"
+        },
+        {
+            "name":"Team T-Force Delta RGB 16GB (2 x 8GB) DDR4 3200",
+            "brand":"T-Force",
+            "price": 70,
+            "category":"RAM",
+            "specs":["DDR4 3200 (PC4 25600)","Timing 16-18-18-38","CAS Latency 16","Voltage 1.35V"],
+            "image":"images/products/t-force16gb.jpg",
+            "all":"true"
+        },
+        {
+            "name":"OLOy WarHawk RGB 16GB (2 x 8GB) DDR4 3600",
+            "brand":"OLOy",
+            "price": 80,
+            "category":"RAM",
+            "specs":["DDR4 3600 (PC4 28800)","Timing 16-19-19-39","Voltage 1.45V"],
+            "image":"images/products/oloy16gb.jpg",
+            "all":"true"
+        },
+        {
+            "name":"Crucial Ballistix RGB 16GB (2 x 8GB) DDR4 3600",
+            "brand":"Crucial",
+            "price": 90,
+            "category":"RAM",
+            "specs":["DDR4 3600 (PC4 28800)","CAS Latency 16","Voltage 1.35V"],
+            "image":"images/products/crucial16gb.jpg",
+            "all":"true"
+        },
+        {
+            "name":"G.SKILL Trident Z Neo 16GB (2 x 8GB) DDR4 3600",
+            "brand":"G.SKILL",
+            "price": 175,
+            "category":"RAM",
+            "specs":["DDR4 3600 (PC4 28800)","Timing 14-15-15-35","Voltage 1.45V"],
+            "image":"images/products/neo16gb.jpg",
+            "all":"true"
+        },
+        {
+            "name":"Patriot Viper Steel 16GB (2 x 8GB) DDR4 4400",
+            "brand":"Patriot",
+            "price": 150,
+            "category":"RAM",
+            "specs":["DDR4 4400 (PC4 35200)","Timing 19-19-19-39","CAS Latency 19","Voltage 1.45V"],
+            "image":"images/products/patriot16gb.jpg",
+            "all":"true"
+        },
+        {
+            "name":"Team T-Force DARK Za 32GB (2 x 16GB) DDR4 3600",
+            "brand":"T-Force",
+            "price": 120,
+            "category":"RAM",
+            "specs":["DDR4 3600 (PC4 28800)","Timing 18-22-22-42","CAS Latency 18","Voltage 1.35V"],
+            "image":"images/products/t-force32gb.jpg",
+            "all":"true"
+        },
+        {
+            "name":"CORSAIR Vengeance RGB Pro 32GB (2 x 16GB) DDR4 3600",
+            "brand":"CORSAIR",
+            "price": 150,
+            "category":"RAM",
+            "specs":["DDR4 3600 (PC4 28800)","Timing 18-22-22-42","CAS Latency 18","Voltage 1.35V"],
+            "image":"images/products/corsair32gb.jpg",
+            "all":"true"
+        },
+        {
+            "name":"G.SKILL Trident Z Royal Series 32GB (2 x 16GB) DDR4 3600",
+            "brand":"G.SKILL",
+            "price": 175,
+            "category":"RAM",
+            "specs":["DDR4 3600 (PC4 28800)","Timing 19-20-20-40","CAS Latency 19","Voltage 1.35V"],
+            "image":"images/products/royal32gb.jpg",
+            "all":"true"
+        },
+        {
+            "name":"G.SKILL Ripjaws V 32GB (2 x 16GB) DDR4 4000",
+            "brand":"G.SKILL",
+            "price": 270,
+            "category":"RAM",
+            "specs":["DDR4 4000 (PC4 32000)","Timing 16-19-19-39","CAS Latency 16","Voltage 1.40V"],
+            "image":"images/products/ripjaws32gb.jpg",
+            "all":"true"
+        },
+        {
+            "name":"CORSAIR Dominator Platinum RGB 64GB (4 x 16GB) 3600",
+            "brand":"CORSAIR",
+            "price": 750,
+            "category":"RAM",
+            "specs":["DDR4 3600 (PC4 28800)","Timing 16-18-18-36","CAS Latency 16","Voltage 1.35V"],
+            "image":"images/products/corsair64gb.jpg",
+            "all":"true"
+        },
+        {
+            "name":"G.SKILL TridentZ RGB 128GB (4 x 32GB) DDR4 3600",
+            "brand":"G.SKILL",
+            "price": 550,
+            "category":"RAM",
+            "specs":["DDR4 3600 (PC4 28800)","Timing 18-22-22-42","CAS Latency 18","Voltage 1.35V"],
+            "image":"images/products/tridentz128gb.jpg",
+            "all":"true"
+        },
+        {
+            "name":"HyperX Predator 256GB (8 x 32GB) DDR4 3200",
+            "brand":"HyperX",
+            "price": 1200,
+            "category":"RAM",
+            "specs":["DDR4 3200 (PC4 25600)","Timing 16-19-19","Voltage 1.35V"],
+            "image":"images/products/hyperx256gb.jpg",
+            "all":"true"
+        }
+    ]

@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
-<body onload="allProducts('true')">
+<body onload="filterProducts('all','true')">
     <header>
         <div class="blackback">
             <div class="top_header">
@@ -65,223 +65,529 @@
     </header>
     <div class="container">
         <div class="sidenav">
-            <button class="dropdown-btn" onclick="productFilter('processors', true)">Processors<i class="fa fa-caret-down" onclick="dropdown(0)"></i></button>
-              <div class="dropdown-container active" id="dropdown0">
-                <a href="#">AMD</a>
-                <a href="#">Intel</a>
-              </div>
-            <button class="dropdown-btn" onclick="productFilter('graphics', true)">Graphics Cards<i class="fa fa-caret-down" onclick="dropdown(1)"></i></button>
+            <a onclick="filterProducts('all', 'true')"">All</a>
+            <button class="dropdown-btn" onclick="filterProducts('category', 'processors')">Processors<i class="fa fa-caret-down" onclick="dropdown(0)"></i></button>
+            <div class="dropdown-container active" id="dropdown0">
+                <a onclick="filterProducts('category', 'processors', 'AMD')">AMD</a>
+                <a onclick="filterProducts('category', 'processors', 'Intel')">Intel</a>
+            </div>
+            <button class="dropdown-btn" onclick="filterProducts('category', 'graphics')">Graphics Cards<i class="fa fa-caret-down" onclick="dropdown(1)"></i></button>
             <div class="dropdown-container active" id="dropdown1">
-                <a href="#">Nvidia</a>
-                <a href="#">AMD</a>
-              </div>
-            <a href="mother.html">Motherboards</a>
-            <a href="ram.html">RAM Memorys</a>
-            <a href="#">Power Supplies</a>
+                <a onclick="filterProducts('category', 'graphics', 'Nvidia')"">Nvidia</a>
+                <a onclick="filterProducts('category', 'graphics', 'AMD')"">AMD</a>
+            </div>
+            <a onclick="filterProducts('category', 'motherboards')"">Motherboards</a>
+            <a onclick="filterProducts('category', 'RAM')"">RAM Memorys</a>
+            <a onclick="filterProducts('category', 'power supplies')"">Power Supplies</a>
         </div> 
         <div class="main">
-            <div class="card" id="card0">
+            <div class="card" id="card0" onclick="showModal(id)">
                 <img src="" alt="image">
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card1">
+            <div class="card" id="card1" onclick="showModal(id)">
                 <img src="" alt="image">
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card2">
+            <div class="card" id="card2" onclick="showModal(id)">
                 <img src="" alt="image" class="image">
                 <div class="container">
-                    <h4 class="name"></h4>
-                    <h5 class="price"></h5>
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card3">
+            <div class="card" id="card3" onclick="showModal(id)">
                 <img src="" alt="image" class="image">
                 <div class="container">
-                    <h4 class="name"></h4>
-                    <h5 class="price"></h5>
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card4">
+            <div class="card" id="card4" onclick="showModal(id)">
                 <img src="" alt="image" class="image">
                 <div class="container">
-                    <h4 class="name"></h4>
-                    <h5 class="price"></h5>
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card5">
+            <div class="card" id="card5" onclick="showModal(id)">
                 <img src="" alt="image" class="image">
                 <div class="container">
-                    <h4 class="name"></h4>
-                    <h5 class="price"></h5>
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card6">
+            <div class="card" id="card6" onclick="showModal(id)">
                 <img src="" alt="image" class="image">
                 <div class="container">
-                    <h4 class="name"></h4>
-                    <h5 class="price"></h5>
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card7">
+            <div class="card" id="card7" onclick="showModal(id)">
                 <img src="" alt="image" class="image">
                 <div class="container">
-                    <h4 class="name"></h4>
-                    <h5 class="price"></h5>
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card8">
+            <div class="card" id="card8" onclick="showModal(id)">
                 <img src="" alt="image" class="image">
                 <div class="container">
-                    <h4 class="name"></h4>
-                    <h5 class="price"></h5>
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card9">
+            <div class="card" id="card9" onclick="showModal(id)">
                 <img src="" alt="image">
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card10">
+            <div class="card" id="card10" onclick="showModal(id)">
                 <img src="" alt="image">
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card11">
+            <div class="card" id="card11" onclick="showModal(id)">
                 <img src="" alt="image">
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card12">
+            <div class="card" id="card12" onclick="showModal(id)">
                 <img src="" alt="image">
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card13">
+            <div class="card" id="card13" onclick="showModal(id)">
                 <img src="" alt="image">
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card14">
+            <div class="card" id="card14" onclick="showModal(id)">
                 <img src="" alt="image">
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card15">
+            <div class="card" id="card15" onclick="showModal(id)">
                 <img src="" alt="image">
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card16">
+            <div class="card" id="card16" onclick="showModal(id)">
                 <img src="" alt="image">
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card17">
+            <div class="card" id="card17" onclick="showModal(id)">
                 <img src="" alt="image">
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card18">
+            <div class="card" id="card18" onclick="showModal(id)">
                 <img src="" alt="image">
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card19">
+            <div class="card" id="card19" onclick="showModal(id)">
                 <img src="" alt="image">
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card20">
+            <div class="card" id="card20" onclick="showModal(id)">
                 <img src="" alt="image">
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card21">
+            <div class="card" id="card21" onclick="showModal(id)">
                 <img src="" alt="image">
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card22">
+            <div class="card" id="card22" onclick="showModal(id)">
                 <img src="" alt="image">
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card23">
+            <div class="card" id="card23" onclick="showModal(id)">
                 <img src="" alt="image">
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card24">
+            <div class="card" id="card24" onclick="showModal(id)">
                 <img src="" alt="image">
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card25">
+            <div class="card" id="card25" onclick="showModal(id)">
                 <img src="" alt="image">
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card26">
+            <div class="card" id="card26" onclick="showModal(id)">
                 <img src="" alt="image">
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card27">
+            <div class="card" id="card27" onclick="showModal(id)">
                 <img src="" alt="image">
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
-            <div class="card" id="card28">
+            <div class="card" id="card28" onclick="showModal(id)">
                 <img src="" alt="image">
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
+            </div>
+            <div class="card" id="card29" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card30" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card31" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card32" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card33" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card34" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card35" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card36" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card37" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card38" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card39" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card40" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card41" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card42" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card43" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card44" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card45" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card46" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card47" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card48" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card49" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card50" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card51" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card52" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card53" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card54" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card55" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card56" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card57" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card58" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card59" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card60" onclick="showModal(id)">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="style='backgrou2nd-color: #91c612; color: #343434'">Sort by</button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button class="dropdown-item" type="button" onclick="sort('price')">Highest price</button>
+          <button class="dropdown-item" type="button" onclick="sort('price-')">Lowest price</button>
+          <button class="dropdown-item" type="button"onclick="sort('name')">Name</button>
+          <button class="dropdown-item" type="button"onclick="sort('name-')">Name desc</button>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideModal()">&times;</span>
+            <img class="modal-image" id="modalImg">
+            <div id="modalText">
+                <h4 id="name"></h4>
+                <p id="specs"></p>
+                <h5 id="price"></h5>
             </div>
         </div>
     </div>

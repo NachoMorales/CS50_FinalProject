@@ -25,30 +25,13 @@ header {
   max-height: 50px;
 }
 
-/*.search input[type="text"] {
-  position: absolute;
-  padding: 6px;
-  width: 30%;
-  right: 40rem;
-  display: flex;
-  border: 1px solid black;
-  font-size: 17px;
-}*/
-
 .top_header a {
-  display: block;
   float: left;
   color: #91c612;
   padding: 15px;
   text-decoration: none;
   font-size: 17px;
 }
-
-/*.search {
-  justify-content: center;
-  align-content: center;
-  padding-top: 2rem;
-}*/
 
 .input-group {
   max-width: 600px;
@@ -204,6 +187,7 @@ footer a {
   width: 200px;
   overflow-x: hidden;
   margin-top: -16px;
+  margin-left: -40px;
   background-color: rgb(235, 235, 235);
   float: left;
 }
@@ -252,14 +236,13 @@ footer a {
 .main {
   position: relative;
   float: left;
-  width: 80%;
-  margin-top: 1.75vh;
-  margin-bottom: 5vh;
+  width: 81%;
+  padding-top: 2.35vh;
 }
 
 .card img {
   max-width: 230px;
-  height: 200px;
+  max-height: 12.5rem;
   padding-top: 3%;
   border-radius: 5px 5px 0 0;
 }
@@ -270,6 +253,10 @@ footer a {
   text-align: center;
   border-top: none;
   height: auto;
+}
+
+.card .container p {
+  display: none;
 }
 
 .card {
@@ -287,4 +274,169 @@ footer a {
   transform: scale(1.25);
   cursor: pointer;
   z-index: 1;
+}
+
+/* Order by button */
+
+.dropdown {
+  position: relative;
+  float: left;
+  margin-left: 3.43vw;
+  margin-top: 2.35vh;
+  /*margin-top: -1.7vh;*/
+  border: none;
+}
+
+.dropdown .btn-success {
+  background-color: #91c612;
+  color: #343434;
+  border-radius: 5px 5px 0 0;
+  border: none;
+}
+
+.dropdown .dropdown-menu {
+  background-color: #424143;
+}
+
+.dropdown .dropdown-item {
+  color: white;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding: 1%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  min-width: 0%;
+  max-width: 50%;
+  min-height: 0%;
+  max-height: 100%;
+  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-content::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-content img {
+  margin: auto;
+  display: block;
+  min-height: 0%;
+  max-height: 60%;
+  max-width: 60%;
+  padding-top: 3%;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+#modalText {
+  margin: auto;
+  min-width: 20%;
+  max-width: 80%;
+  text-align: center;
+  color: #343434;
+  padding: 0;
+  height: auto;
+  white-space: pre-line;
+  max-height: 100%;
+}
+
+#modalText #specs,
+#modalText #name,
+#modalText #price {
+  margin-top: -2vh;
+}
+
+.modal-content img,
+#modalText {
+  animation-name: zoom;
+  animation-duration: 0.25s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #343434;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #91c612;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    max-width: 100%;
+    margin: 0;
+    min-height: 0%;
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  #modalText {
+    max-width: 90%;
+    max-height: 100%;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+
+  #modalText #specs {
+  }
+
+  .modal-content img {
+    min-height: 0%;
+    width: auto;
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 30.35vh;
+    right: 20vh;
+  }
+
+  .sidenav {
+    display: none;
+  }
+
+  .card {
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .main {
+    width: 100%;
+  }
 }

@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
-<body onload="productFilter('processors')">
+<body onload="filterProducts('category', 'processors')">
     <header>
         <div class="blackback">
             <div class="top_header">
@@ -86,6 +86,7 @@
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
             <div class="card" id="card1">
@@ -93,57 +94,448 @@
                 <div class="container">
                     <h4></h4>
                     <h5></h5>
+                    <p></p>
                 </div>
             </div>
             <div class="card" id="card2">
                 <img src="" alt="image" class="image">
                 <div class="container">
-                    <h4 class="name"></h4>
-                    <h5 class="price"></h5>
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
                 </div>
             </div>
             <div class="card" id="card3">
                 <img src="" alt="image" class="image">
                 <div class="container">
-                    <h4 class="name"></h4>
-                    <h5 class="price"></h5>
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
                 </div>
             </div>
             <div class="card" id="card4">
                 <img src="" alt="image" class="image">
                 <div class="container">
-                    <h4 class="name"></h4>
-                    <h5 class="price"></h5>
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
                 </div>
             </div>
             <div class="card" id="card5">
                 <img src="" alt="image" class="image">
                 <div class="container">
-                    <h4 class="name"></h4>
-                    <h5 class="price"></h5>
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
                 </div>
             </div>
             <div class="card" id="card6">
                 <img src="" alt="image" class="image">
                 <div class="container">
-                    <h4 class="name"></h4>
-                    <h5 class="price"></h5>
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
                 </div>
             </div>
             <div class="card" id="card7">
                 <img src="" alt="image" class="image">
                 <div class="container">
-                    <h4 class="name"></h4>
-                    <h5 class="price"></h5>
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
                 </div>
             </div>
             <div class="card" id="card8">
                 <img src="" alt="image" class="image">
                 <div class="container">
-                    <h4 class="name"></h4>
-                    <h5 class="price"></h5>
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
                 </div>
             </div>
+            <div class="card" id="card9">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card10">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card11">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card12">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card13">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card14">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card15">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card16">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card17">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card18">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card19">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card20">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card21">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card22">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card23">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card24">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card25">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card26">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card27">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="card" id="card28">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card29">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card30">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card31">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card32">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card33">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card34">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card35">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card36">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card37">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card38">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card39">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card40">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card41">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card42">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card43">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card44">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card45">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card46">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card47">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card48">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card49">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card50">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card51">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card52">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card53">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card54">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card55">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card56">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card57">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card58">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card59">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div><div class="card" id="card60">
+                <img src="" alt="image">
+                <div class="container">
+                    <h4></h4>
+                    <h5></h5>
+                    <p></p>
+                </div>
         </div>
     </div>
     <footer>
