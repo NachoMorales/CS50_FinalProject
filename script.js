@@ -8,6 +8,12 @@ function dropdown(n) {
     }
 }
 
+// Global variables
+var productsFilteredVariable
+var keyVariable
+var valueVariable
+var brandVariable
+var sortVariable = 'category'; // Default: Sort products by category
 
 // Load products from json file
 var products = new Array()
@@ -15,45 +21,98 @@ fetch("./products.json")
     .then(function(resp) {
         return resp.json();
     })
+    // This part will run after filterProducts() function, so
     .then(function(data) {
         products = data;
+        // We call filterProducts() again with the global variables updated
+        filterProducts(keyVariable, valueVariable, brandVariable);
     });
 
-var productsFilteredVariable
-
-
-function redirect(key, value, brand) {
-    window.location.assign("products.html");
-    return filterProducts(key, value, brand)
+    // Check hash
+function checkIfRedirected(key, value, brand) {
+    if (location.hash != "") {
+        var split = location.hash.split("-");
+        return filterProducts(split[1], split[2]);
+    } else {
+        return filterProducts(key, value, brand);
+    }
 }
-
 
 
 
 // This function filters products -onload & -onclick 
 function filterProducts(key, value, brand) {
+    // Update Breadcrumb
+    activeLi = document.querySelector(".breadcrumb .active");
+    allProductsLi = document.querySelector(".breadcrumb #allProducts")
+    allProductsLiContent = document.querySelector(".breadcrumb #allProducts a")
+    categoryLi = document.querySelector(".breadcrumb #category")
+    categoryLiContent = document.querySelector(".breadcrumb #category a")
+
+    // Update global variables
+    keyVariable = key;
+    valueVariable = value;
+    brandVariable = brand;
+
     if (brand == null) {
             // Show all products
         if (key == 'all') {
             productsFilteredVariable = products.filter(item => item.all == value);
-            return sort('category', productsFilteredVariable);
+
+            // Updating breadcrumb
+            activeLi.innerHTML = "All Products";
+            allProductsLi.style.display = "none";
+            categoryLi.style.display = "none";
+
+            return sort(sortVariable, productsFilteredVariable);
     
             // Filter by category
         } else if (key == 'category') {
             productsFilteredVariable = products.filter(item => item.category == value);
-            return sort(null, productsFilteredVariable);
+            
+            // Updating breadcrumb
+            activeLi.innerHTML = value;
+            allProductsLiContent.innerHTML = "All Products"
+            allProductsLi.style.removeProperty('display');
+            categoryLi.style.display = "none";
+
+            return sort(sortVariable, productsFilteredVariable);
+
+        } else if (key == 'brand') {
+            var brandArray = new Array();
+            brandArray = value;
+            productsFilteredVariable = products.filter(item => item.brand == value);
+
+            // Updating breadcrumb
+            activeLi.innerHTML = value;
+            allProductsLiContent.innerHTML = "All Products"
+            allProductsLi.style.removeProperty('display');
+            categoryLi.style.display = "none";
+
+            return sort(sortVariable, productsFilteredVariable)
         }
 
         // Filter by brand
     } else {
         productsFilteredVariable = products.filter(item => item.category == value);
-        productsFilteredVariable = productsFilteredVariable.filter(item => item.brand == brand);
-        return sort(null, productsFilteredVariable);
+        productsFilteredVariable = productsFilteredVariable.filter(item => item.brand === brand);
+        // Updating breadcrumb
+        activeLi.innerHTML = brand;
+        allProductsLiContent.innerHTML = "All Products"
+        allProductsLi.style.removeProperty('display');
+        categoryLiContent.innerHTML = value
+        categoryLi.style.removeProperty('display');
+        var onClickAttribute = document.createAttribute("onclick");
+        onClickAttribute.value = `filterProducts('category', '${value}')`
+        categoryLiContent.setAttributeNode(onClickAttribute);
+
+
+        return sort(sortVariable, productsFilteredVariable);
     }
 }
 
-// TODO: Order by category
 function sort(orderby, productsFiltered) {
+    sortVariable = orderby;
     // If function was triggered by button, this will make it work 
     if (productsFiltered == null) {
         productsFiltered = productsFilteredVariable;
@@ -128,13 +187,13 @@ function cards(filteredCards) {
         for (var i = 0; i < itemSpecs;) {
             if (needToReloadSpecs == false) {
                 // Create new line between specs
-                id.getElementsByTagName("p")[0].innerHTML += filteredCards[card].specs[i] + "\n";
+                id.getElementsByTagName("p")[0].innerHTML += "- " + filteredCards[card].specs[i] + "\n";
 
                 // If you have re-filtered or sorted the products, this will remove the previous specs and replace them with the new ones
             } else if (needToReloadSpecs == true) {
                 id.getElementsByTagName("p")[0].innerHTML = "";
                 needToReloadSpecs = false;
-                id.getElementsByTagName("p")[0].innerHTML += filteredCards[card].specs[i] + "\n";
+                id.getElementsByTagName("p")[0].innerHTML += "- " + filteredCards[card].specs[i] + "\n";
             }
             i += 1;
         }
@@ -189,5 +248,17 @@ window.onclick = function(event) {
 }
 
 
+// TODO: clicking a brand from index.html will redirect to products.html and change onload to specific parameters
 
-// TODO: BREADCRUMB FUNCTION: CHANGE ON FILTERING
+function redirectAndFilter(key, value) {
+    keyVariable = key;
+    valueVariable = value;
+    location.hash = "-" + key + "-" + value;
+    locationHash = location.hash;
+    window.location.assign("products.html" + locationHash);
+    
+    // body = document.getElementById("productsBody");
+    // var onLoadAttribute = document.createAttribute("onload");
+    // onLoadAttribute.value = `filterProducts('${key}', '${value}')`
+    // body.setAttributeNode(onLoadAttribute);
+}
