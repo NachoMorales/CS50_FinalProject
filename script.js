@@ -164,6 +164,19 @@ function sort(orderby, productsFiltered) {
         return cards(productsFiltered);
     }
 }
+
+
+
+
+
+// TODO: CREAR FUNCION COMO <CARDS> QUE HAGA LO MISMO PERO CON LA LISTA DE BUSQUEDA
+
+
+
+
+
+
+
     
 var needToReloadSpecs = false;
 // This function filters how many cards are going to be shown in the page and then loads the content on them
@@ -216,6 +229,7 @@ function showModal(id) {
     var name = document.getElementById("name");
     var price = document.getElementById("price");
     var specs = document.getElementById("specs");
+    var buyButton = document.getElementById("buyButton");
     
     modal.style.display = "block";
 
@@ -224,6 +238,7 @@ function showModal(id) {
     name.textContent = document.querySelector(id + " h4").textContent
     price.textContent = document.querySelector(id + " h5").textContent
     specs.textContent = document.querySelector(id + " p").textContent
+    buyButton.innerHTML = '<i class="fas fa-shopping-cart"></i> Add to cart';
 
     // search bar is causing problems when modal is active: hide it
     var searchBar = document.querySelector(".input-group");
@@ -261,4 +276,9 @@ function redirectAndFilter(key, value) {
     // var onLoadAttribute = document.createAttribute("onload");
     // onLoadAttribute.value = `filterProducts('${key}', '${value}')`
     // body.setAttributeNode(onLoadAttribute);
+}
+
+
+function addToCart() {
+    document.getElementById("buyButton").innerHTML = '<i class="fas fa-check-circle fa-lg"></i> Added';
 }
