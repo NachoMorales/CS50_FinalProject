@@ -223,15 +223,23 @@ function cards(filteredCards) {
 
 // card.onclick => showModal
 function showModal(id) {
+    // search bar is causing problems when modal is active: hide it
+    var searchBar = document.querySelector(".input-group");
+    searchBar.style.visibility = "hidden";
+
+
+    var modal = document.querySelector(".modal");
+    modal.style.display = "block";
+    if (id == 'video') {
+        return;
+    }
+
     var id = "#" + id;
-    var modal = document.getElementById("myModal");
     var modalImg = document.getElementById("modalImg");
     var name = document.getElementById("name");
     var price = document.getElementById("price");
     var specs = document.getElementById("specs");
     var buyButton = document.getElementById("buyButton");
-    
-    modal.style.display = "block";
 
     // Load content from the card into the modal
     modalImg.src = document.querySelector(id + " img").src
@@ -239,14 +247,10 @@ function showModal(id) {
     price.textContent = document.querySelector(id + " h5").textContent
     specs.textContent = document.querySelector(id + " p").textContent
     buyButton.innerHTML = '<i class="fas fa-shopping-cart"></i> Add to cart';
-
-    // search bar is causing problems when modal is active: hide it
-    var searchBar = document.querySelector(".input-group");
-    searchBar.style.visibility = "hidden";
 }
 
 function hideModal() {
-    var modal = document.getElementById("myModal");
+    var modal = document.querySelector(".modal");
     modal.style.display = "none";
 
     // Show search bar
@@ -256,7 +260,7 @@ function hideModal() {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    var modal = document.getElementById("myModal");
+    var modal = document.querySelector(".modal");
     if (event.target == modal) {
         hideModal();
     }

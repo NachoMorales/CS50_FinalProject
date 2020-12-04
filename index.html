@@ -173,7 +173,7 @@
                     <i class="fab fa-youtube"></i>
                     <label>
                         <div>
-                            <a href="https://www.youtube.com" >Project Presentation</a>
+                            <a href="#" id="video" onclick="showModal(id)">Project Presentation</a>
                         </div>
                     </label>
                 </div>
@@ -181,5 +181,13 @@
             </div>
         </div>
     </footer>
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideModal()">&times;</span>
+            <div class="divVideo">
+            <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
