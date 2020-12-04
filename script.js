@@ -166,17 +166,6 @@ function sort(orderby, productsFiltered) {
 }
 
 
-
-
-
-// TODO: CREAR FUNCION COMO <CARDS> QUE HAGA LO MISMO PERO CON LA LISTA DE BUSQUEDA
-
-
-
-
-
-
-
     
 var needToReloadSpecs = false;
 // This function filters how many cards are going to be shown in the page and then loads the content on them
@@ -267,7 +256,7 @@ window.onclick = function(event) {
 }
 
 
-// TODO: clicking a brand from index.html will redirect to products.html and change onload to specific parameters
+// Clicking a brand from index.html will redirect to products.html and change onload to specific parameters
 
 function redirectAndFilter(key, value) {
     keyVariable = key;
@@ -283,6 +272,75 @@ function redirectAndFilter(key, value) {
 }
 
 
+
+// TODO: Add to cart
 function addToCart() {
     document.getElementById("buyButton").innerHTML = '<i class="fas fa-check-circle fa-lg"></i> Added';
+}
+
+
+
+// TODO: CREAR FUNCION COMO <CARDS> QUE HAGA LO MISMO PERO CON LA LISTA DE BUSQUEDA
+function myFunction() {
+    var liDiv, txtValue;
+    var searchedProducts = 0;
+    var input = document.getElementById("searchInput");
+    var filter = input.value.toUpperCase();
+    var ul = document.querySelector(".searchItemsContainer");
+    var li = ul.getElementsByTagName("li");
+    for (var i = 0; i < li.length; i++) {      
+        liDiv = li[i].getElementsByTagName("div")[0];
+        itemName = liDiv.getElementsByTagName("h4")[0];
+        txtValue = itemName.textContent || itemName.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+            products++;
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+    alert(products);
+    searchBar(searchedProducts);
+}
+
+// This function loads the content of the items searched
+// NOTE: 'maxCards' value must be equal to the number of total items in html
+function searchBar(products) {
+    // // Filter how many items are going to be shown
+    // for (var maxItems = 60; maxItems >= products.length;) { // products.LENGTH???? FALTA DATO
+    //     var highestItemId = document.getElementById("item" + maxItems);
+    //     maxItems -= 1;
+    //     highestItemId.style.display = 'none';
+    // }
+
+    // Load content into items
+    for (var item = 0; item < products.length; item += 1) {
+        id = document.querySelector("#item" + item)
+        id.getElementsByTagName("h4")[0].textContent = products[item].name;
+        id.getElementsByTagName("h5")[0].textContent = "$" + products[item].price;
+        id.getElementsByTagName("img")[0].src = products[item].image;
+        var itemSpecs = products[item].specs.length
+
+        for (var i = 0; i < itemSpecs;) {
+            if (needToReloadSpecs == false) {
+                // Create new line between specs
+                id.getElementsByTagName("p")[0].innerHTML += "- " + products[item].specs[i] + "\n";
+
+                // If you have re-filtered or sorted the products, this will remove the previous specs and replace them with the new ones
+            } else if (needToReloadSpecs == true) {
+                id.getElementsByTagName("p")[0].innerHTML = "";
+                needToReloadSpecs = false;
+                id.getElementsByTagName("p")[0].innerHTML += "- " + products[item].specs[i] + "\n";
+            }
+            i += 1;
+        }
+        needToReloadSpecs = true;
+        
+        
+        // // If you have re-filtered (without reloading the page), this will make sure every valid card is shown
+        // var lowestItemId = "item" + item;
+        // if (document.getElementById(lowestItemId).style.display == 'none') {
+        //     document.getElementById(lowestItemId).style.removeProperty('display');
+        // }
+    }
 }

@@ -21,7 +21,7 @@
                     <a href="index.html"><i class="fab fa-gg fa-5x"></i></a>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search components" aria-label="search components" aria-describedby="button-addon2">
+                    <input type="text" class="form-control" placeholder="Search components" aria-label="search components" aria-describedby="button-addon2" id="searchInput" onkeyup="myFunction()">
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-search fa-lg"></i></button>
                     </div>
@@ -31,14 +31,38 @@
                         <li id="item0" onclick="showModal(id)">
                                 <img src="" alt="image">
                                 <div class="container">
-                                    <h4></h4>
-                                    <h5></h5>
-                                    <p></p>
+                                    <h4>asd</h4>
+                                    <h5>fgh</h5>
                                 </div>
-                            
                         </li>
-                        <li>2</li>
-                        <li>3</li>
+                        <li id="item1" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4>asd</h4>
+                                <h5>fgh</h5>
+                            </div>
+                        </li>
+                        <li id="item2" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4>asd</h4>
+                                <h5>fgh</h5>
+                            </div>
+                        </li>
+                        <li id="item3" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4>cd</h4>
+                                <h5>fgh</h5>
+                            </div>
+                        </li>
+                        <li id="item4" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4>bd</h4>
+                                <h5>fgh</h5>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -602,7 +626,6 @@
             </div>
         </div>
     </div>
-    
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="hideModal()">&times;</span>
