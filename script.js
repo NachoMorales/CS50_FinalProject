@@ -26,6 +26,7 @@ fetch("./products.json")
         products = data;
         // We call filterProducts() again with the global variables updated
         filterProducts(keyVariable, valueVariable, brandVariable);
+        
     });
 
     // Check hash
@@ -212,17 +213,22 @@ function cards(filteredCards) {
 
 // card.onclick => showModal
 function showModal(id) {
+    
     // search bar is causing problems when modal is active: hide it
     var searchBar = document.querySelector(".input-group");
     searchBar.style.visibility = "hidden";
 
 
+    if (id == 'cart') {
+        var cartModal = document.getElementById("cartModal");
+        return cartModal.style.display = "block"    
+    }
+    
     var modal = document.querySelector(".modal");
     modal.style.display = "block";
     if (id == 'video') {
         return;
-    }
-
+    } 
     var id = "#" + id;
     var modalImg = document.getElementById("modalImg");
     var name = document.getElementById("name");
@@ -240,7 +246,9 @@ function showModal(id) {
 
 function hideModal() {
     var modal = document.querySelector(".modal");
+    var cartModal = document.querySelector("#cartModal");
     modal.style.display = "none";
+    cartModal.style.display = "none";
 
     // Show search bar
     var searchBar = document.querySelector(".input-group");
@@ -250,8 +258,12 @@ function hideModal() {
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     var modal = document.querySelector(".modal");
-    if (event.target == modal) {
+    var cartModal = document.querySelector("#cartModal");
+    var searchBar = document.querySelector(".searchItemsContainer")
+    if (event.target == modal || event.target == cartModal) {
         hideModal();
+    } else if (event.target != searchBar) {
+        searchBar.style.display = "";
     }
 }
 
@@ -272,18 +284,69 @@ function redirectAndFilter(key, value) {
 }
 
 
+var totalProducts = 0;
+var cartItem
 
-// TODO: Add to cart
-function addToCart() {
+// Add item to cart
+function addToCart(products) {
     document.getElementById("buyButton").innerHTML = '<i class="fas fa-check-circle fa-lg"></i> Added';
+    itemName = document.querySelector("#myModal #name").innerText;
+    if (totalProducts == 0) {
+        cartItem = products.filter(item => item.name == itemName);
+    } else {
+        cartItem2 = products.filter(item => item.name == itemName);
+        cartItem.push(...cartItem2);
+    }
+
+
+        document.querySelector("#cartModal .cartItems").innerHTML += `<div id="cartItem` + totalProducts + `"> <img src="" alt="product"> <div class="container"> <h4></h4> <h5></h5> <span class="removeProduct" onclick="removeCartProduct('#cartItem` + totalProducts + `')">&times;</span> </div> </div>`;
+
+        cartItemDiv = document.querySelector("#cartItem" + totalProducts);
+        cartItemDiv.getElementsByTagName("img")[0].src = cartItem[totalProducts].image;
+        cartItemDiv.getElementsByTagName("h4")[0].textContent = cartItem[totalProducts].name;
+        cartItemDiv.getElementsByTagName("h5")[0].textContent = "$" + cartItem[totalProducts].price;
+
+        var totalPrice = 0;
+        for (var i = 0; i <= totalProducts; i++) {
+            totalPrice += cartItem[i].price;
+        }
+        document.querySelector(".totalPrice h4").textContent = "Total Price = $";
+        document.querySelector(".totalPrice h3").textContent = totalPrice;
+
+        totalProducts++;
+}
+
+// Remove items from cart and update total price
+function removeCartProduct(id) {
+    itemRemoved = document.querySelector(id);
+    itemRemovedName = itemRemoved.getElementsByTagName("h4")[0].textContent;
+
+    var itemRemovedArrayPosition = cartItem.map(function(e) {return e.name;}).indexOf(itemRemovedName);
+
+    if (itemRemovedArrayPosition > -1) {
+        cartItem.splice(itemRemovedArrayPosition, 1);
+        totalProducts -= 1;
+    }
+
+    itemRemovedStringPrice = itemRemoved.getElementsByTagName("h5")[0].textContent;
+    itemRemovedPrice = itemRemovedStringPrice.split("$");
+    
+    totalPriceElement = document.querySelector(".totalPrice h3")
+    totalPriceElement.textContent -= itemRemovedPrice[1];
+    
+    if (totalPriceElement.textContent == 0) {
+        document.querySelector(".totalPrice h4").textContent = "No items in cart";
+        totalPriceElement.textContent = "";
+    }
+
+    itemRemoved.remove();
 }
 
 
-
-// TODO: CREAR FUNCION COMO <CARDS> QUE HAGA LO MISMO PERO CON LA LISTA DE BUSQUEDA
-function myFunction() {
+// When searching items, filter
+function searchItems() {
+    document.querySelector(".searchItemsContainer").style.display = "block";
     var liDiv, txtValue;
-    var searchedProducts = 0;
     var input = document.getElementById("searchInput");
     var filter = input.value.toUpperCase();
     var ul = document.querySelector(".searchItemsContainer");
@@ -291,34 +354,26 @@ function myFunction() {
     for (var i = 0; i < li.length; i++) {      
         liDiv = li[i].getElementsByTagName("div")[0];
         itemName = liDiv.getElementsByTagName("h4")[0];
-        txtValue = itemName.textContent || itemName.innerText;
+        itemCategory = liDiv.getElementsByTagName("h6")[0];
+        txtValue = itemName.textContent || itemName.innerText || itemCategory.textContent || itemCategory.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
-            products++;
         } else {
             li[i].style.display = "none";
         }
     }
-    alert(products);
-    searchBar(searchedProducts);
+    
 }
 
 // This function loads the content of the items searched
-// NOTE: 'maxCards' value must be equal to the number of total items in html
 function searchBar(products) {
-    // // Filter how many items are going to be shown
-    // for (var maxItems = 60; maxItems >= products.length;) { // products.LENGTH???? FALTA DATO
-    //     var highestItemId = document.getElementById("item" + maxItems);
-    //     maxItems -= 1;
-    //     highestItemId.style.display = 'none';
-    // }
-
     // Load content into items
-    for (var item = 0; item < products.length; item += 1) {
-        id = document.querySelector("#item" + item)
-        id.getElementsByTagName("h4")[0].textContent = products[item].name;
-        id.getElementsByTagName("h5")[0].textContent = "$" + products[item].price;
+    for (var item = 0; item < products.length;) {
+        var id = document.querySelector("#item" + item);
         id.getElementsByTagName("img")[0].src = products[item].image;
+        id.getElementsByTagName("h4")[0].textContent = products[item].name;
+        id.getElementsByTagName("h6")[0].textContent = products[item].category;
+        id.getElementsByTagName("h5")[0].textContent = "$" + products[item].price;
         var itemSpecs = products[item].specs.length
 
         for (var i = 0; i < itemSpecs;) {
@@ -334,13 +389,28 @@ function searchBar(products) {
             }
             i += 1;
         }
+        item += 1;
         needToReloadSpecs = true;
         
-        
-        // // If you have re-filtered (without reloading the page), this will make sure every valid card is shown
-        // var lowestItemId = "item" + item;
-        // if (document.getElementById(lowestItemId).style.display == 'none') {
-        //     document.getElementById(lowestItemId).style.removeProperty('display');
-        // }
     }
 }
+
+// Scroll to top
+var topButton = document.getElementById("btnScrollTop");
+document.querySelector("#btnScrollTop").addEventListener('click', function(){
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    });
+}); 
+
+window.addEventListener('scroll', function(){
+    var topButton = document.getElementById("btnScrollTop");
+    if (document.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        document.getElementById("btnScrollTop").style.display = "block";
+    } else {
+        document.getElementById("btnScrollTop").style.display = "none";
+    }
+});
+

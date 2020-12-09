@@ -12,62 +12,567 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
-<body id="productsBody" onload="checkIfRedirected('all','true')">
+<body id="productsBody" onload="checkIfRedirected('all','true'); searchBar(products)">
     <header>
         <div class="blackback">
-            <i class="fas fa-shopping-cart fa-lg"></i>
+            <i class="fas fa-shopping-cart fa-lg" id="cart" onclick="showModal(id)"></i>
             <div class="top_header">
                 <div class="header_logo">
                     <a href="index.html"><i class="fab fa-gg fa-5x"></i></a>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search components" aria-label="search components" aria-describedby="button-addon2" id="searchInput" onkeyup="myFunction()">
+                    <input type="text" class="form-control" placeholder="Search components" aria-label="search components" aria-describedby="button-addon2" id="searchInput" onkeyup="searchItems()">
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-search fa-lg"></i></button>
                     </div>
                 </div>
-                <div class="searchItems" style="display: none;">
+                <div class="searchItems">
                     <ul class="searchItemsContainer">
                         <li id="item0" onclick="showModal(id)">
-                                <img src="" alt="image">
-                                <div class="container">
-                                    <h4>asd</h4>
-                                    <h5>fgh</h5>
-                                </div>
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
                         </li>
                         <li id="item1" onclick="showModal(id)">
                             <img src="" alt="image">
                             <div class="container">
-                                <h4>asd</h4>
-                                <h5>fgh</h5>
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
                             </div>
                         </li>
                         <li id="item2" onclick="showModal(id)">
                             <img src="" alt="image">
                             <div class="container">
-                                <h4>asd</h4>
-                                <h5>fgh</h5>
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
                             </div>
                         </li>
                         <li id="item3" onclick="showModal(id)">
                             <img src="" alt="image">
                             <div class="container">
-                                <h4>cd</h4>
-                                <h5>fgh</h5>
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
                             </div>
                         </li>
                         <li id="item4" onclick="showModal(id)">
                             <img src="" alt="image">
                             <div class="container">
-                                <h4>bd</h4>
-                                <h5>fgh</h5>
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item5" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item6" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item7" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item8" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item9" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item10" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item11" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item12" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item13" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item14" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item15" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item16" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item17" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item18" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item19" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item20" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item21" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item22" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item23" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item24" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item25" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item26" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item27" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item28" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item29" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item30" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item31" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item32" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item33" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item34" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item35" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item36" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item37" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item38" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item39" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item40" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item41" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item42" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item43" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item44" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item45" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item46" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item47" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item48" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item49" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item50" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item51" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item52" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item53" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item54" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item55" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item56" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item57" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item58" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li id="item59" onclick="showModal(id)">
+                            <img src="" alt="image">
+                            <div class="container">
+                                <h4></h4>
+                                <h5></h5>
+                                <h6></h6>
+                                <p></p>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container" id="navBarContainer">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="products.html">All Products</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,39 +581,36 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item" onmouseover="dropdown(0)" onmouseout="dropdown(0)">
-                            <a class="nav-link" onclick="filterProducts('category', 'processors'); dropdown(0)">Processors <i class="fa fa-caret-down"></i></a>
+                            <a class="nav-link" onclick="filterProducts('category', 'processors')">Processors <i class="fa fa-caret-down"></i></a>
                             <div class="dropdown-container" id="dropdown0">
                                 <a onclick="filterProducts('category', 'processors', 'AMD')">AMD</a>
                                 <a onclick="filterProducts('category', 'processors', 'Intel')">Intel</a>
                             </div>
                         </li>
                         <li class="nav-item" onmouseover="dropdown(1)" onmouseout="dropdown(1)">
-                            <a class="nav-link" onclick="filterProducts('category', 'graphics'); dropdown(1)">Graphics Cards <i class="fa fa-caret-down"></i></a>
+                            <a class="nav-link" onclick="filterProducts('category', 'graphics')">Graphics Cards <i class="fa fa-caret-down"></i></a>
                             <div class="dropdown-container" id="dropdown1">
                                 <a onclick="filterProducts('category', 'graphics', 'Nvidia')"">Nvidia</a>
                                 <a onclick="filterProducts('category', 'graphics', 'AMD')"">AMD</a>
                             </div>
                         </li>
                         <li class="nav-item" onmouseover="dropdown(2)" onmouseout="dropdown(2)">
-                            <a class="nav-link" onclick="filterProducts('category', 'motherboards'); dropdown(2)">Motherboards <i class="fa fa-caret-down"></i></a>
+                            <a class="nav-link" onclick="filterProducts('category', 'motherboards')">Motherboards <i class="fa fa-caret-down"></i></a>
                             <div class="dropdown-container" id="dropdown2">
                                 <a onclick="filterProducts('category', 'motherboards', 'AMD')">AMD</a>
                                 <a onclick="filterProducts('category', 'motherboards', 'Intel')">Intel</a>
                             </div>
                         </li>
                         <li class="nav-item" onmouseover="dropdown(3)" onmouseout="dropdown(3)">
-                            <a class="nav-link" onclick="filterProducts('category', 'RAM'); dropdown(3)">RAM Memorys <i class="fa fa-caret-down"></i></a>
+                            <a class="nav-link" onclick="filterProducts('category', 'RAM')">RAM Memorys <i class="fa fa-caret-down"></i></a>
                             <div class="dropdown-container" id="dropdown3">
                                 <a>16 GB</a>
                                 <a>32 GB</a>
                                 <a>64 GB +</a>
                             </div>
                         </li>
-                        <li class="nav-item" onmouseover="dropdown(4)" onmouseout="dropdown(4)">
-                            <a class="nav-link" onclick="filterProducts('category', 'power supplies'); dropdown(4)">Power Supplies <i class="fa fa-caret-down"></i></a>
-                            <div class="dropdown-container" id="dropdown4">
-
-                            </div>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="filterProducts('category', 'power supplies')">Power Supplies</a>
                         </li>
                     </ul>
                 </div>
@@ -635,9 +1137,22 @@
                 <p id="specs"></p>
                 <h5 id="price"></h5>
             </div>
-            <button id="buyButton" onclick="addToCart()"></button>
+            <button id="buyButton" onclick="addToCart(products)"></button>
         </div>
     </div>
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideModal()">&times;</span>
+            <div class="cartItems">
+                
+            </div>
+            <div class="totalPrice">
+                <h4></h4>
+                <h3></h3> 
+            </div>
+        </div>
+    </div>
+    <a class="scroll-top" id="btnScrollTop">Top</a>
     <footer>
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
