@@ -188,12 +188,12 @@ function cards(filteredCards) {
         var itemSpecs = filteredCards[card].specs.length
 
         for (var i = 0; i < itemSpecs;) {
-            if (needToReloadSpecs == false) {
+            if (!needToReloadSpecs) {
                 // Create new line between specs
                 id.getElementsByTagName("p")[0].innerHTML += "- " + filteredCards[card].specs[i] + "\n";
 
                 // If you have re-filtered or sorted the products, this will remove the previous specs and replace them with the new ones
-            } else if (needToReloadSpecs == true) {
+            } else if (needToReloadSpecs) {
                 id.getElementsByTagName("p")[0].innerHTML = "";
                 needToReloadSpecs = false;
                 id.getElementsByTagName("p")[0].innerHTML += "- " + filteredCards[card].specs[i] + "\n";
@@ -291,6 +291,7 @@ var cartItem
 function addToCart(products) {
     document.getElementById("buyButton").innerHTML = '<i class="fas fa-check-circle fa-lg"></i> Added';
     itemName = document.querySelector("#myModal #name").innerText;
+    document.querySelector("#buyCart").style.display = "block"
     if (totalProducts == 0) {
         cartItem = products.filter(item => item.name == itemName);
     } else {
@@ -298,22 +299,21 @@ function addToCart(products) {
         cartItem.push(...cartItem2);
     }
 
+    document.querySelector("#cartModal .cartItems").innerHTML += `<div id="cartItem` + totalProducts + `"> <img src="" alt="product"> <div class="container"> <h4></h4> <h5></h5> <span class="removeProduct" onclick="removeCartProduct('#cartItem` + totalProducts + `')">&times;</span> </div> </div>`;
 
-        document.querySelector("#cartModal .cartItems").innerHTML += `<div id="cartItem` + totalProducts + `"> <img src="" alt="product"> <div class="container"> <h4></h4> <h5></h5> <span class="removeProduct" onclick="removeCartProduct('#cartItem` + totalProducts + `')">&times;</span> </div> </div>`;
+    cartItemDiv = document.querySelector("#cartItem" + totalProducts);
+    cartItemDiv.getElementsByTagName("img")[0].src = cartItem[totalProducts].image;
+    cartItemDiv.getElementsByTagName("h4")[0].textContent = cartItem[totalProducts].name;
+    cartItemDiv.getElementsByTagName("h5")[0].textContent = "$" + cartItem[totalProducts].price;
 
-        cartItemDiv = document.querySelector("#cartItem" + totalProducts);
-        cartItemDiv.getElementsByTagName("img")[0].src = cartItem[totalProducts].image;
-        cartItemDiv.getElementsByTagName("h4")[0].textContent = cartItem[totalProducts].name;
-        cartItemDiv.getElementsByTagName("h5")[0].textContent = "$" + cartItem[totalProducts].price;
+    var totalPrice = 0;
+    for (var i = 0; i <= totalProducts; i++) {
+        totalPrice += cartItem[i].price;
+    }
+    document.querySelector(".totalPrice h4").textContent = "Total Price = $";
+    document.querySelector(".totalPrice h3").textContent = totalPrice;
 
-        var totalPrice = 0;
-        for (var i = 0; i <= totalProducts; i++) {
-            totalPrice += cartItem[i].price;
-        }
-        document.querySelector(".totalPrice h4").textContent = "Total Price = $";
-        document.querySelector(".totalPrice h3").textContent = totalPrice;
-
-        totalProducts++;
+    totalProducts++;
 }
 
 // Remove items from cart and update total price
@@ -336,6 +336,7 @@ function removeCartProduct(id) {
     
     if (totalPriceElement.textContent == 0) {
         document.querySelector(".totalPrice h4").textContent = "No items in cart";
+        document.querySelector("#buyCart").style.display = "none";
         totalPriceElement.textContent = "";
     }
 
@@ -377,12 +378,12 @@ function searchBar(products) {
         var itemSpecs = products[item].specs.length
 
         for (var i = 0; i < itemSpecs;) {
-            if (needToReloadSpecs == false) {
+            if (!needToReloadSpecs) {
                 // Create new line between specs
                 id.getElementsByTagName("p")[0].innerHTML += "- " + products[item].specs[i] + "\n";
 
                 // If you have re-filtered or sorted the products, this will remove the previous specs and replace them with the new ones
-            } else if (needToReloadSpecs == true) {
+            } else if (needToReloadSpecs) {
                 id.getElementsByTagName("p")[0].innerHTML = "";
                 needToReloadSpecs = false;
                 id.getElementsByTagName("p")[0].innerHTML += "- " + products[item].specs[i] + "\n";
@@ -396,21 +397,21 @@ function searchBar(products) {
 }
 
 // Scroll to top
-var topButton = document.getElementById("btnScrollTop");
-document.querySelector("#btnScrollTop").addEventListener('click', function(){
-    window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth"
-    });
-}); 
-
-window.addEventListener('scroll', function(){
+function goToTop() {
     var topButton = document.getElementById("btnScrollTop");
-    if (document.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        document.getElementById("btnScrollTop").style.display = "block";
-    } else {
-        document.getElementById("btnScrollTop").style.display = "none";
-    }
-});
-
+    topButton.addEventListener('click', function(){
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        });
+    }); 
+    
+    window.addEventListener('scroll', function(){
+        if (document.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            topButton.style.display = "block";
+        } else {
+            topButton.style.display = "none";
+        }
+    });
+}

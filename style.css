@@ -342,7 +342,7 @@ footer a {
 .dropdown .btn-success {
   background-color: #91c612;
   color: #343434;
-  border-radius: 5px 5px 0 0;
+  border-radius: 5px;
   border: none;
 }
 
@@ -407,15 +407,13 @@ footer a {
 .modal-content img {
   margin: auto;
   display: block;
-  min-height: 0%;
-  max-height: 60%;
-  max-width: 60%;
-  min-width: 0%;
   width: auto;
   height: auto;
+  min-height: 20%;
+  max-height: 60%;
+  max-width: 60%;
+  min-width: 20%;
   padding-top: 3%;
-  overflow: scroll;
-  scrollbar-width: none;
 }
 
 #modalText {
@@ -428,6 +426,8 @@ footer a {
   height: auto;
   white-space: pre-line;
   max-height: 100%;
+  overflow: auto;
+  scrollbar-width: none;
 }
 
 #buyButton {
@@ -587,6 +587,16 @@ footer a {
   padding-top: 10vh;
 }
 
+#cartModal #buyCart {
+  display: none;
+  width: 5.5vw;
+  margin: auto;
+  margin-bottom: 1vh;
+  border: 1px solid #343434;
+  background-color: #91c612;
+  border-radius: 10px;
+}
+
 .removeProduct {
   position: absolute;
   right: 3vw;
@@ -611,19 +621,35 @@ footer a {
   font-size: 25px;
   color: #91c612;
 }
+
 .totalPrice {
   position: absolute;
   right: 15px;
   bottom: 0;
+
+  border-radius: 100px;
+  padding: 1px;
+  margin-right: 5vw;
 }
 
 .scroll-top {
   position: fixed;
   bottom: 3vh;
   right: 1vw;
-
   padding: 5px;
-  border-radius: 7px 7px 7px 7px;
-  background-color: #91c612;
+  border-radius: 100px;
+  background-color: #343434;
   cursor: pointer;
+}
+
+.scroll-top:hover {
+  background-color: #91c612;
+}
+
+.scroll-top:hover .fa-arrow-up {
+  color: #343434;
+}
+
+.fa-arrow-up {
+  color: #91c612;
 }

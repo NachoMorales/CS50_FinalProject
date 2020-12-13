@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
-<body id="productsBody" onload="checkIfRedirected('all','true'); searchBar(products)">
+<body id="productsBody" onload="checkIfRedirected('all','true'); searchBar(products); goToTop()">
     <header>
         <div class="blackback">
             <i class="fas fa-shopping-cart fa-lg" id="cart" onclick="showModal(id)"></i>
@@ -1146,13 +1146,14 @@
             <div class="cartItems">
                 
             </div>
+            <button id="buyCart" onclick="alert('Ticket: $' + document.querySelector(`.totalPrice h3`).textContent)"><i class="far fa-credit-card"></i> Buy</button>
             <div class="totalPrice">
-                <h4></h4>
+                <h4>No items in cart</h4>
                 <h3></h3> 
             </div>
         </div>
     </div>
-    <a class="scroll-top" id="btnScrollTop">Top</a>
+    <a class="scroll-top" id="btnScrollTop"><i class="fas fa-arrow-up fa-2x"></i></a>
     <footer>
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
