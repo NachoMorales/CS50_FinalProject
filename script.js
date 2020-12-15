@@ -26,14 +26,16 @@ fetch("./products.json")
         products = data;
         // We call filterProducts() again with the global variables updated
         filterProducts(keyVariable, valueVariable, brandVariable);
-        
+        searchBar(products);
+        goToTop();
     });
 
     // Check hash
 function checkIfRedirected(key, value, brand) {
     if (location.hash != "") {
         var split = location.hash.split("-");
-        return filterProducts(split[1], split[2]);
+        replacedSplit = split[2].replace("%20", " ");
+        return filterProducts(split[1], replacedSplit);
     } else {
         return filterProducts(key, value, brand);
     }
@@ -247,8 +249,10 @@ function showModal(id) {
 function hideModal() {
     var modal = document.querySelector(".modal");
     var cartModal = document.querySelector("#cartModal");
+    
     modal.style.display = "none";
     cartModal.style.display = "none";
+    
 
     // Show search bar
     var searchBar = document.querySelector(".input-group");
@@ -367,26 +371,26 @@ function searchItems() {
 }
 
 // This function loads the content of the items searched
-function searchBar(products) {
+function searchBar(productsBar) {    
     // Load content into items
-    for (var item = 0; item < products.length;) {
+    for (var item = 0; item < productsBar.length;) {
         var id = document.querySelector("#item" + item);
-        id.getElementsByTagName("img")[0].src = products[item].image;
-        id.getElementsByTagName("h4")[0].textContent = products[item].name;
-        id.getElementsByTagName("h6")[0].textContent = products[item].category;
-        id.getElementsByTagName("h5")[0].textContent = "$" + products[item].price;
-        var itemSpecs = products[item].specs.length
+        id.getElementsByTagName("img")[0].src = productsBar[item].image;
+        id.getElementsByTagName("h4")[0].textContent = productsBar[item].name;
+        id.getElementsByTagName("h6")[0].textContent = productsBar[item].category;
+        id.getElementsByTagName("h5")[0].textContent = "$" + productsBar[item].price;
+        var itemSpecs = productsBar[item].specs.length
 
         for (var i = 0; i < itemSpecs;) {
             if (!needToReloadSpecs) {
                 // Create new line between specs
-                id.getElementsByTagName("p")[0].innerHTML += "- " + products[item].specs[i] + "\n";
+                id.getElementsByTagName("p")[0].innerHTML += "- " + productsBar[item].specs[i] + "\n";
 
                 // If you have re-filtered or sorted the products, this will remove the previous specs and replace them with the new ones
             } else if (needToReloadSpecs) {
                 id.getElementsByTagName("p")[0].innerHTML = "";
                 needToReloadSpecs = false;
-                id.getElementsByTagName("p")[0].innerHTML += "- " + products[item].specs[i] + "\n";
+                id.getElementsByTagName("p")[0].innerHTML += "- " + productsBar[item].specs[i] + "\n";
             }
             i += 1;
         }

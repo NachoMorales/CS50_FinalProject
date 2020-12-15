@@ -42,7 +42,7 @@ header {
 
 .searchItems,
 .input-group {
-  max-width: 600px;
+  max-width: 36.8vw;
   margin: auto;
 }
 
@@ -60,7 +60,7 @@ header {
 }
 
 .searchItems {
-  max-width: 46.8vw;
+  max-width: 36.8vw;
   background-color: white;
   margin-top: -15px;
   max-height: 50vh;
@@ -116,13 +116,14 @@ header {
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
-  margin: 0;
+  margin-left: 0.6vw;
 }
 
 .dropdown-container {
   display: none;
   background-color: #91c612;
   min-width: 7vw;
+  margin-left: 0.7vw;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   border-radius: 15px 15px 15px 15px;
   z-index: 2;
@@ -223,12 +224,21 @@ footer nav {
 }
 
 footer nav li {
-  margin-left: 15vw;
+  overflow: hidden;
+  margin-left: 10vw;
+}
+
+footer nav li a {
+  height: 5vh;
+  width: 6vw;
+}
+
+#navbarFooterContainer {
+  height: 5.5vh;
 }
 
 .bottom_footer {
   background-color: #424143;
-  margin-top: 6vh;
   margin-bottom: 0px;
   padding: 3px;
   padding-top: 25px;
@@ -287,9 +297,10 @@ footer a {
 .main {
   position: relative;
   float: left;
-  width: 100%;
   align-self: center;
   padding-top: 2.35vh;
+  margin-left: -3.43vw;
+  margin-right: -3.43vw;
 }
 
 .card img {
@@ -398,6 +409,8 @@ footer a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  overflow: auto;
+  scrollbar-width: none;
 }
 
 .modal-content::-webkit-scrollbar {
@@ -407,12 +420,10 @@ footer a {
 .modal-content img {
   margin: auto;
   display: block;
-  width: auto;
-  height: auto;
-  min-height: 20%;
+  min-height: 200px;
   max-height: 60%;
   max-width: 60%;
-  min-width: 20%;
+  min-width: 200px;
   padding-top: 3%;
 }
 
@@ -423,11 +434,8 @@ footer a {
   text-align: center;
   color: #343434;
   padding: 0;
-  height: auto;
   white-space: pre-line;
-  max-height: 100%;
-  overflow: auto;
-  scrollbar-width: none;
+  height: 100%;
 }
 
 #buyButton {
@@ -436,6 +444,7 @@ footer a {
   background-color: #424242;
   border-radius: 50px 50px 50px 50px;
   margin-bottom: 1vh;
+  margin-top: 1vh;
   border: 1px solid black;
   color: #91c612;
   padding: 2px 10px;
@@ -449,6 +458,11 @@ footer a {
 #modalText #name,
 #modalText #price {
   margin-top: -2vh;
+}
+
+#modalText #specs {
+  overflow: auto;
+  scrollbar-width: none;
 }
 
 #modalText #price {
@@ -489,8 +503,8 @@ footer a {
 }
 
 #videoModal .divVideo {
-  width: 60vw;
-  height: 70vh;
+  width: 100%;
+  height: 60vh;
   justify-content: center;
   align-self: center;
 }
@@ -633,10 +647,11 @@ footer a {
 }
 
 .scroll-top {
+  display: none;
   position: fixed;
   bottom: 3vh;
   right: 1vw;
-  padding: 5px;
+  padding: 10px 12px;
   border-radius: 100px;
   background-color: #343434;
   cursor: pointer;
@@ -644,6 +659,7 @@ footer a {
 
 .scroll-top:hover {
   background-color: #91c612;
+  border: 1px solid #343434;
 }
 
 .scroll-top:hover .fa-arrow-up {

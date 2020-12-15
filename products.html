@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
-<body id="productsBody" onload="checkIfRedirected('all','true'); searchBar(products); goToTop()">
+<body id="productsBody" onload="checkIfRedirected('all','true')">
     <header>
         <div class="blackback">
             <i class="fas fa-shopping-cart fa-lg" id="cart" onclick="showModal(id)"></i>
@@ -601,13 +601,8 @@
                                 <a onclick="filterProducts('category', 'motherboards', 'Intel')">Intel</a>
                             </div>
                         </li>
-                        <li class="nav-item" onmouseover="dropdown(3)" onmouseout="dropdown(3)">
-                            <a class="nav-link" onclick="filterProducts('category', 'RAM')">RAM Memorys <i class="fa fa-caret-down"></i></a>
-                            <div class="dropdown-container" id="dropdown3">
-                                <a>16 GB</a>
-                                <a>32 GB</a>
-                                <a>64 GB +</a>
-                            </div>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="filterProducts('category', 'RAM')">RAM Memorys</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" onclick="filterProducts('category', 'power supplies')">Power Supplies</a>
@@ -1155,7 +1150,7 @@
     </div>
     <a class="scroll-top" id="btnScrollTop"><i class="fas fa-arrow-up fa-2x"></i></a>
     <footer>
-        <div class="container">
+    <!--   <div class="container" id="navbarFooterContainer">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
@@ -1171,7 +1166,7 @@
                 </ul>
                 </div>
             </nav>
-        </div>
+        </div>-->
         <div class="bottom_footer">
             <div class="container">
                 <div class="info">
