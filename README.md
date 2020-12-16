@@ -9,3 +9,6 @@ You can select the products to check the price and the specifications, then you 
 The cart shows you how much does each product costs and the total price of all of them.
 If you are not confortable with your product's choice, you can delete them from the cart.
 Finally, you can buy your cart items and the page will display an alert with your purchase ticket.
+
+Project Presentation:
+https://youtu.be/faOkHDcikvw
