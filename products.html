@@ -1150,23 +1150,6 @@
     </div>
     <a class="scroll-top" id="btnScrollTop"><i class="fas fa-arrow-up fa-2x"></i></a>
     <footer>
-    <!--   <div class="container" id="navbarFooterContainer">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Help</a>
-                    </li>
-                </ul>
-                </div>
-            </nav>
-        </div>-->
         <div class="bottom_footer">
             <div class="container">
                 <div class="info">
@@ -1181,7 +1164,7 @@
                     <i class="fab fa-youtube"></i>
                     <label>
                         <div>
-                            <a href="https://www.youtube.com" >Project Presentation</a>
+                            <a href="#" id="video" onclick="showModal(id)">Project Presentation</a>
                         </div>
                     </label>
                 </div>
@@ -1189,5 +1172,13 @@
             </div>
         </div>
     </footer>
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideModal()">&times;</span>
+            <div class="divVideo">
+                <iframe src="https://youtu.be/faOkHDcikvw"></iframe>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -85,9 +85,6 @@ header {
 }
 
 /* NavBar */
-#navbarContainer {
-}
-
 .navbar {
   position: relative;
 }
@@ -127,9 +124,6 @@ header {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   border-radius: 15px 15px 15px 15px;
   z-index: 2;
-}
-
-.dropdown-container:hover {
 }
 
 .dropdown-container a {
@@ -340,13 +334,9 @@ footer a {
 }
 
 /* Order by button */
-
 .dropdown {
   position: relative;
-  float: right; /*
-  margin-left: 3.43vw;
-  margin-top: 2.35vh;*/
-  /*margin-top: -1.7vh;*/
+  float: right;
   border: none;
 }
 
@@ -515,55 +505,6 @@ footer a {
   height: 100%;
 }
 
-/* Smaller Screens */
-@media only screen and (max-width: 700px) {
-  .modal-content {
-    max-width: 100%;
-    margin: 0;
-    min-height: 0%;
-    max-height: 100%;
-    overflow: hidden;
-  }
-
-  #videoModal .divVideo {
-    width: 100vw;
-    height: 100vh;
-  }
-
-  #modalText {
-    max-width: 90%;
-    max-height: 100%;
-    overflow: scroll;
-    scrollbar-width: none;
-  }
-
-  #modalText #specs {
-  }
-
-  .modal-content img {
-    min-height: 0%;
-    width: auto;
-  }
-
-  .dropdown {
-  }
-
-  .sidenav {
-    display: none;
-  }
-
-  .card {
-  }
-
-  .card:hover {
-    transform: none;
-  }
-
-  .main {
-    width: 100%;
-  }
-}
-
 /* cart */
 #cartModal .modal-content {
   max-width: 60%;
@@ -668,4 +609,44 @@ footer a {
 
 .fa-arrow-up {
   color: #91c612;
+}
+
+/* Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    max-width: 100%;
+    margin: 0;
+    min-height: 0%;
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  #videoModal .divVideo {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #modalText {
+    max-width: 90%;
+    max-height: 100%;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+
+  .modal-content img {
+    min-height: 0%;
+    width: auto;
+  }
+
+  .sidenav {
+    display: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .main {
+    width: 100%;
+  }
 }

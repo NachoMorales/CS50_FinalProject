@@ -226,11 +226,14 @@ function showModal(id) {
         return cartModal.style.display = "block"    
     }
     
-    var modal = document.querySelector(".modal");
-    modal.style.display = "block";
     if (id == 'video') {
+        var modal = document.querySelector("#videoModal");
+        modal.style.display = "block";
         return;
-    } 
+    }
+
+    var modal = document.querySelector(".modal");
+    modal.style.display = "block"; 
     var id = "#" + id;
     var modalImg = document.getElementById("modalImg");
     var name = document.getElementById("name");
@@ -248,12 +251,13 @@ function showModal(id) {
 
 function hideModal() {
     var modal = document.querySelector(".modal");
+    var videoModal = document.querySelector("#videoModal");
     var cartModal = document.querySelector("#cartModal");
     
     modal.style.display = "none";
+    videoModal.style.display = "none";
     cartModal.style.display = "none";
     
-
     // Show search bar
     var searchBar = document.querySelector(".input-group");
     searchBar.style.visibility = "visible"
@@ -262,9 +266,10 @@ function hideModal() {
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     var modal = document.querySelector(".modal");
+    var videoModal = document.querySelector("#videoModal");
     var cartModal = document.querySelector("#cartModal");
     var searchBar = document.querySelector(".searchItemsContainer")
-    if (event.target == modal || event.target == cartModal) {
+    if (event.target == modal || event.target == cartModal || event.target == videoModal) {
         hideModal();
     } else if (event.target != searchBar) {
         searchBar.style.display = "";
@@ -280,11 +285,6 @@ function redirectAndFilter(key, value) {
     location.hash = "-" + key + "-" + value;
     locationHash = location.hash;
     window.location.assign("products.html" + locationHash);
-    
-    // body = document.getElementById("productsBody");
-    // var onLoadAttribute = document.createAttribute("onload");
-    // onLoadAttribute.value = `filterProducts('${key}', '${value}')`
-    // body.setAttributeNode(onLoadAttribute);
 }
 
 
